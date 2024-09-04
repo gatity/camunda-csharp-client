@@ -2,21 +2,20 @@
 
 All URIs are relative to *http://localhost:8080/engine-rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**ExecuteMigrationPlan**](MigrationApi.md#executemigrationplan) | **POST** /migration/execute | Execute Migration Plan
-[**ExecuteMigrationPlanAsync**](MigrationApi.md#executemigrationplanasync) | **POST** /migration/executeAsync | Execute Migration Plan Async (Batch)
-[**GenerateMigrationPlan**](MigrationApi.md#generatemigrationplan) | **POST** /migration/generate | Generate Migration Plan
-[**ValidateMigrationPlan**](MigrationApi.md#validatemigrationplan) | **POST** /migration/validate | Validate Migration Plan
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**ExecuteMigrationPlan**](MigrationApi.md#executemigrationplan) | **POST** /migration/execute | Execute Migration Plan |
+| [**ExecuteMigrationPlanAsync**](MigrationApi.md#executemigrationplanasync) | **POST** /migration/executeAsync | Execute Migration Plan Async (Batch) |
+| [**GenerateMigrationPlan**](MigrationApi.md#generatemigrationplan) | **POST** /migration/generate | Generate Migration Plan |
+| [**ValidateMigrationPlan**](MigrationApi.md#validatemigrationplan) | **POST** /migration/validate | Validate Migration Plan |
 
-
-<a name="executemigrationplan"></a>
+<a id="executemigrationplan"></a>
 # **ExecuteMigrationPlan**
 > void ExecuteMigrationPlan (MigrationExecutionDto migrationExecutionDto = null)
 
 Execute Migration Plan
 
-Executes a migration plan synchronously for multiple process instances. To execute a migration plan asynchronously, use the [Execute Migration Plan Async(Batch)](https://docs.camunda.org/manual/7.17/reference/rest/migration/execute-migration-async/) method.  For more information about the difference between synchronous and asynchronous execution of a migration plan, please refer to the related section of [the user guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/process-instance-migration/#executing-a-migration-plan).
+Executes a migration plan synchronously for multiple process instances. To execute a migration plan asynchronously, use the [Execute Migration Plan Async(Batch)](https://docs.camunda.org/manual/7.21/reference/rest/migration/execute-migration-async/) method.  For more information about the difference between synchronous and asynchronous execution of a migration plan, please refer to the related section of [the user guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/process-instance-migration/#executing-a-migration-plan).
 
 ### Example
 ```csharp
@@ -35,6 +34,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -48,8 +51,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MigrationApi.ExecuteMigrationPlan: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MigrationApi.ExecuteMigrationPlan: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -57,11 +60,28 @@ namespace Example
 }
 ```
 
+#### Using the ExecuteMigrationPlanWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Execute Migration Plan
+    apiInstance.ExecuteMigrationPlanWithHttpInfo(migrationExecutionDto);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MigrationApi.ExecuteMigrationPlanWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **migrationExecutionDto** | [**MigrationExecutionDto**](MigrationExecutionDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **migrationExecutionDto** | [**MigrationExecutionDto**](MigrationExecutionDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -69,7 +89,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -81,17 +101,17 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **204** | Request successful. This method returns no content. |  -  |
-| **400** | The request is not valid if one or more of the following statements apply:  * The provided migration plan is not valid, so an exception of type &#x60;MigrationPlanValidationException&#x60; is returned. * The provided migration plan is not valid for a specific process instance it is applied to, so an exception of type &#x60;MigratingProcessInstanceValidationException&#x60; is returned. * In case additional parameters of the request are unexpected, an exception of type &#x60;InvalidRequestException&#x60; is returned.  See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **400** | The request is not valid if one or more of the following statements apply:  * The provided migration plan is not valid, so an exception of type &#x60;MigrationPlanValidationException&#x60; is returned. * The provided migration plan is not valid for a specific process instance it is applied to, so an exception of type &#x60;MigratingProcessInstanceValidationException&#x60; is returned. * In case additional parameters of the request are unexpected, an exception of type &#x60;InvalidRequestException&#x60; is returned.  See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="executemigrationplanasync"></a>
+<a id="executemigrationplanasync"></a>
 # **ExecuteMigrationPlanAsync**
 > BatchDto ExecuteMigrationPlanAsync (MigrationExecutionDto migrationExecutionDto = null)
 
 Execute Migration Plan Async (Batch)
 
-Executes a migration plan asynchronously (batch) for multiple process instances. To execute a migration plan synchronously, use the [Execute MigrationPlan](https://docs.camunda.org/manual/7.17/reference/rest/migration/execute-migration/) method.  For more information about the difference between synchronous and asynchronous execution of a migration plan, please refer to the related section of [the user guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/process-instance-migration/#executing-a-migration-plan).
+Executes a migration plan asynchronously (batch) for multiple process instances. To execute a migration plan synchronously, use the [Execute MigrationPlan](https://docs.camunda.org/manual/7.21/reference/rest/migration/execute-migration/) method.  For more information about the difference between synchronous and asynchronous execution of a migration plan, please refer to the related section of [the user guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/process-instance-migration/#executing-a-migration-plan).
 
 ### Example
 ```csharp
@@ -110,6 +130,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -124,8 +148,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MigrationApi.ExecuteMigrationPlanAsync: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MigrationApi.ExecuteMigrationPlanAsync: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -133,11 +157,31 @@ namespace Example
 }
 ```
 
+#### Using the ExecuteMigrationPlanAsyncWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Execute Migration Plan Async (Batch)
+    ApiResponse<BatchDto> response = apiInstance.ExecuteMigrationPlanAsyncWithHttpInfo(migrationExecutionDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MigrationApi.ExecuteMigrationPlanAsyncWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **migrationExecutionDto** | [**MigrationExecutionDto**](MigrationExecutionDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **migrationExecutionDto** | [**MigrationExecutionDto**](MigrationExecutionDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -145,7 +189,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -157,11 +201,11 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **400** | The request is not valid if one or more of the following statements apply:  * The provided migration plan is not valid, so an exception of type &#x60;MigrationPlanValidationException&#x60; is returned. * In case additional parameters of the request are unexpected, an exception of type &#x60;InvalidRequestException&#x60; is returned.  See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **400** | The request is not valid if one or more of the following statements apply:  * The provided migration plan is not valid, so an exception of type &#x60;MigrationPlanValidationException&#x60; is returned. * In case additional parameters of the request are unexpected, an exception of type &#x60;InvalidRequestException&#x60; is returned.  See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="generatemigrationplan"></a>
+<a id="generatemigrationplan"></a>
 # **GenerateMigrationPlan**
 > MigrationPlanDto GenerateMigrationPlan (MigrationPlanGenerationDto migrationPlanGenerationDto = null)
 
@@ -186,6 +230,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -200,8 +248,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MigrationApi.GenerateMigrationPlan: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MigrationApi.GenerateMigrationPlan: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -209,11 +257,31 @@ namespace Example
 }
 ```
 
+#### Using the GenerateMigrationPlanWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Generate Migration Plan
+    ApiResponse<MigrationPlanDto> response = apiInstance.GenerateMigrationPlanWithHttpInfo(migrationPlanGenerationDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MigrationApi.GenerateMigrationPlanWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **migrationPlanGenerationDto** | [**MigrationPlanGenerationDto**](MigrationPlanGenerationDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **migrationPlanGenerationDto** | [**MigrationPlanGenerationDto**](MigrationPlanGenerationDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -221,7 +289,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -233,17 +301,17 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **400** |  The requested migration was invalid. See [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **400** |  The requested migration was invalid. See [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="validatemigrationplan"></a>
+<a id="validatemigrationplan"></a>
 # **ValidateMigrationPlan**
 > MigrationPlanReportDto ValidateMigrationPlan (MigrationPlanDto migrationPlanDto = null)
 
 Validate Migration Plan
 
-Validates a migration plan statically without executing it. This corresponds to the [creation time validation](https://docs.camunda.org/manual/7.17/user-guide/process-engine/process-instance-migration/#creation-time-validation) described in the user guide.
+Validates a migration plan statically without executing it. This corresponds to the [creation time validation](https://docs.camunda.org/manual/7.21/user-guide/process-engine/process-instance-migration/#creation-time-validation) described in the user guide.
 
 ### Example
 ```csharp
@@ -262,6 +330,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -276,8 +348,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MigrationApi.ValidateMigrationPlan: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MigrationApi.ValidateMigrationPlan: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -285,11 +357,31 @@ namespace Example
 }
 ```
 
+#### Using the ValidateMigrationPlanWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Validate Migration Plan
+    ApiResponse<MigrationPlanReportDto> response = apiInstance.ValidateMigrationPlanWithHttpInfo(migrationPlanDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MigrationApi.ValidateMigrationPlanWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **migrationPlanDto** | [**MigrationPlanDto**](MigrationPlanDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **migrationPlanDto** | [**MigrationPlanDto**](MigrationPlanDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -297,7 +389,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -309,7 +401,7 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. The validation report was returned. |  -  |
-| **400** | In case additional parameters of the request are unexpected, an exception of type &#x60;InvalidRequestException&#x60; is returned. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **400** | In case additional parameters of the request are unexpected, an exception of type &#x60;InvalidRequestException&#x60; is returned. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

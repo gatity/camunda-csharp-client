@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **VariableNamesIgnoreCase** | **bool?** | Match all variable names provided in &#x60;variableValues&#x60; case-insensitively. If set to &#x60;true&#x60; **variableName** and **variablename** are treated as equal. | [optional] 
 **VariableValuesIgnoreCase** | **bool?** | Match all variable values provided in &#x60;variableValues&#x60; case-insensitively. If set to &#x60;true&#x60; **variableValue** and **variablevalue** are treated as equal. | [optional] 
 **VariableScopeIdIn** | **List&lt;string&gt;** | Only include variable instances which belong to one of passed scope ids. | [optional] 
-**Sorting** | [**List&lt;VariableInstanceQueryDtoSorting&gt;**](VariableInstanceQueryDtoSorting.md) | An array of criteria to sort the result by. Each element of the array is an object that specifies one ordering.                       The position in the array identifies the rank of an ordering, i.e., whether it is primary, secondary, etc.                       Sorting has no effect for &#x60;count&#x60; endpoints | [optional] 
+**Sorting** | [**List&lt;VariableInstanceQueryDtoSortingInner&gt;**](VariableInstanceQueryDtoSortingInner.md) | An array of criteria to sort the result by. Each element of the array is an object that specifies one ordering.                       The position in the array identifies the rank of an ordering, i.e., whether it is primary, secondary, etc.                       Sorting has no effect for &#x60;count&#x60; endpoints | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

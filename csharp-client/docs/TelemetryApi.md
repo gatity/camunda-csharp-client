@@ -2,14 +2,13 @@
 
 All URIs are relative to *http://localhost:8080/engine-rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**ConfigureTelemetry**](TelemetryApi.md#configuretelemetry) | **POST** /telemetry/configuration | Configure Telemetry
-[**GetTelemetryConfiguration**](TelemetryApi.md#gettelemetryconfiguration) | **GET** /telemetry/configuration | Fetch Telemetry Configuration
-[**GetTelemetryData**](TelemetryApi.md#gettelemetrydata) | **GET** /telemetry/data | Fetch Telemetry Data
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**ConfigureTelemetry**](TelemetryApi.md#configuretelemetry) | **POST** /telemetry/configuration | Configure Telemetry |
+| [**GetTelemetryConfiguration**](TelemetryApi.md#gettelemetryconfiguration) | **GET** /telemetry/configuration | Fetch Telemetry Configuration |
+| [**GetTelemetryData**](TelemetryApi.md#gettelemetrydata) | **GET** /telemetry/data | Fetch Telemetry Data |
 
-
-<a name="configuretelemetry"></a>
+<a id="configuretelemetry"></a>
 # **ConfigureTelemetry**
 > void ConfigureTelemetry (TelemetryConfigurationDto telemetryConfigurationDto = null)
 
@@ -34,6 +33,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -47,8 +50,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TelemetryApi.ConfigureTelemetry: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling TelemetryApi.ConfigureTelemetry: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -56,11 +59,28 @@ namespace Example
 }
 ```
 
+#### Using the ConfigureTelemetryWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Configure Telemetry
+    apiInstance.ConfigureTelemetryWithHttpInfo(telemetryConfigurationDto);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling TelemetryApi.ConfigureTelemetryWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **telemetryConfigurationDto** | [**TelemetryConfigurationDto**](TelemetryConfigurationDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **telemetryConfigurationDto** | [**TelemetryConfigurationDto**](TelemetryConfigurationDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -68,7 +88,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -84,7 +104,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="gettelemetryconfiguration"></a>
+<a id="gettelemetryconfiguration"></a>
 # **GetTelemetryConfiguration**
 > TelemetryConfigurationDto GetTelemetryConfiguration ()
 
@@ -109,6 +129,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -122,8 +146,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TelemetryApi.GetTelemetryConfiguration: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling TelemetryApi.GetTelemetryConfiguration: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -131,16 +155,35 @@ namespace Example
 }
 ```
 
+#### Using the GetTelemetryConfigurationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Fetch Telemetry Configuration
+    ApiResponse<TelemetryConfigurationDto> response = apiInstance.GetTelemetryConfigurationWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling TelemetryApi.GetTelemetryConfigurationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 This endpoint does not need any parameter.
-
 ### Return type
 
 [**TelemetryConfigurationDto**](TelemetryConfigurationDto.md)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -156,7 +199,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="gettelemetrydata"></a>
+<a id="gettelemetrydata"></a>
 # **GetTelemetryData**
 > TelemetryDataDto GetTelemetryData ()
 
@@ -181,6 +224,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -194,8 +241,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling TelemetryApi.GetTelemetryData: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling TelemetryApi.GetTelemetryData: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -203,16 +250,35 @@ namespace Example
 }
 ```
 
+#### Using the GetTelemetryDataWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Fetch Telemetry Data
+    ApiResponse<TelemetryDataDto> response = apiInstance.GetTelemetryDataWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling TelemetryApi.GetTelemetryDataWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 This endpoint does not need any parameter.
-
 ### Return type
 
 [**TelemetryDataDto**](TelemetryDataDto.md)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 

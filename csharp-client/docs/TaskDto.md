@@ -8,9 +8,10 @@ Name | Type | Description | Notes
 **Name** | **string** | The task name. | [optional] 
 **Assignee** | **string** | The assignee&#39;s id. | [optional] 
 **Owner** | **string** | The owner&#39;s id. | [optional] 
-**Created** | **DateTime?** | The date the task was created on. [Default format](https://docs.camunda.org/manual/7.17/reference/rest/overview/date-format/) &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;. | [optional] 
-**Due** | **DateTime?** | The task&#39;s due date. [Default format](https://docs.camunda.org/manual/7.17/reference/rest/overview/date-format/) &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;. | [optional] 
-**FollowUp** | **DateTime?** | The follow-up date for the task. [Default format](https://docs.camunda.org/manual/7.17/reference/rest/overview/date-format/) &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;. | [optional] 
+**Created** | **DateTime?** | The date the task was created on. [Default format](https://docs.camunda.org/manual/7.21/reference/rest/overview/date-format/) &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;. | [optional] 
+**LastUpdated** | **DateTime?** | The date the task was last updated. Every action that fires a [task update event](https://docs.camunda.org/manual/7.21/user-guide/process-engine/delegation-code/#task-listener-event-lifecycle) will update this property. [Default format](https://docs.camunda.org/manual/7.21/reference/rest/overview/date-format/) &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;. | [optional] 
+**Due** | **DateTime?** | The task&#39;s due date. [Default format](https://docs.camunda.org/manual/7.21/reference/rest/overview/date-format/) &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;. | [optional] 
+**FollowUp** | **DateTime?** | The follow-up date for the task. [Default format](https://docs.camunda.org/manual/7.21/reference/rest/overview/date-format/) &#x60;yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ&#x60;. | [optional] 
 **DelegationState** | **string** | The task&#39;s delegation state. Possible values are &#x60;PENDING&#x60; and &#x60;RESOLVED&#x60;. | [optional] 
 **Description** | **string** | The task&#39;s description. | [optional] 
 **ExecutionId** | **string** | The id of the execution the task belongs to. | [optional] 
@@ -24,7 +25,7 @@ Name | Type | Description | Notes
 **TaskDefinitionKey** | **string** | The task&#39;s key. | [optional] 
 **Suspended** | **bool?** | Whether the task belongs to a process instance that is suspended. | [optional] 
 **FormKey** | **string** | If not &#x60;null&#x60;, the form key for the task. | [optional] 
-**CamundaFormRef** | [**Dictionary&lt;string, CamundaFormRef&gt;**](CamundaFormRef.md) | A reference to a specific version of a Camunda Form. | [optional] 
+**CamundaFormRef** | [**CamundaFormRef**](CamundaFormRef.md) |  | [optional] 
 **TenantId** | **string** | If not &#x60;null&#x60;, the tenant id of the task. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

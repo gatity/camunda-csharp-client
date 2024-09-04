@@ -2,20 +2,19 @@
 
 All URIs are relative to *http://localhost:8080/engine-rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**AvailableOperationsAuthorization**](AuthorizationApi.md#availableoperationsauthorization) | **OPTIONS** /authorization | Authorization Resource Options
-[**AvailableOperationsAuthorizationInstance**](AuthorizationApi.md#availableoperationsauthorizationinstance) | **OPTIONS** /authorization/{id} | Authorization Resource Options
-[**CreateAuthorization**](AuthorizationApi.md#createauthorization) | **POST** /authorization/create | Create a New Authorization
-[**DeleteAuthorization**](AuthorizationApi.md#deleteauthorization) | **DELETE** /authorization/{id} | Delete Authorization
-[**GetAuthorization**](AuthorizationApi.md#getauthorization) | **GET** /authorization/{id} | Get Authorization
-[**GetAuthorizationCount**](AuthorizationApi.md#getauthorizationcount) | **GET** /authorization/count | Get Authorization Count
-[**IsUserAuthorized**](AuthorizationApi.md#isuserauthorized) | **GET** /authorization/check | Perform an Authorization Check
-[**QueryAuthorizations**](AuthorizationApi.md#queryauthorizations) | **GET** /authorization | Get Authorizations
-[**UpdateAuthorization**](AuthorizationApi.md#updateauthorization) | **PUT** /authorization/{id} | Update an Authorization
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**AvailableOperationsAuthorization**](AuthorizationApi.md#availableoperationsauthorization) | **OPTIONS** /authorization | Authorization Resource Options |
+| [**AvailableOperationsAuthorizationInstance**](AuthorizationApi.md#availableoperationsauthorizationinstance) | **OPTIONS** /authorization/{id} | Authorization Resource Options |
+| [**CreateAuthorization**](AuthorizationApi.md#createauthorization) | **POST** /authorization/create | Create a New Authorization |
+| [**DeleteAuthorization**](AuthorizationApi.md#deleteauthorization) | **DELETE** /authorization/{id} | Delete Authorization |
+| [**GetAuthorization**](AuthorizationApi.md#getauthorization) | **GET** /authorization/{id} | Get Authorization |
+| [**GetAuthorizationCount**](AuthorizationApi.md#getauthorizationcount) | **GET** /authorization/count | Get Authorization Count |
+| [**IsUserAuthorized**](AuthorizationApi.md#isuserauthorized) | **GET** /authorization/check | Perform an Authorization Check |
+| [**QueryAuthorizations**](AuthorizationApi.md#queryauthorizations) | **GET** /authorization | Get Authorizations |
+| [**UpdateAuthorization**](AuthorizationApi.md#updateauthorization) | **PUT** /authorization/{id} | Update an Authorization |
 
-
-<a name="availableoperationsauthorization"></a>
+<a id="availableoperationsauthorization"></a>
 # **AvailableOperationsAuthorization**
 > ResourceOptionsDto AvailableOperationsAuthorization ()
 
@@ -40,6 +39,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -53,8 +56,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AvailableOperationsAuthorization: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AuthorizationApi.AvailableOperationsAuthorization: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -62,16 +65,35 @@ namespace Example
 }
 ```
 
+#### Using the AvailableOperationsAuthorizationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Authorization Resource Options
+    ApiResponse<ResourceOptionsDto> response = apiInstance.AvailableOperationsAuthorizationWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AuthorizationApi.AvailableOperationsAuthorizationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 This endpoint does not need any parameter.
-
 ### Return type
 
 [**ResourceOptionsDto**](ResourceOptionsDto.md)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -86,7 +108,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="availableoperationsauthorizationinstance"></a>
+<a id="availableoperationsauthorizationinstance"></a>
 # **AvailableOperationsAuthorizationInstance**
 > ResourceOptionsDto AvailableOperationsAuthorizationInstance (string id)
 
@@ -111,11 +133,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new AuthorizationApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the authorization to be retrieved.
+            var id = "id_example";  // string | The id of the authorization to be retrieved.
 
             try
             {
@@ -125,8 +151,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.AvailableOperationsAuthorizationInstance: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AuthorizationApi.AvailableOperationsAuthorizationInstance: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -134,11 +160,31 @@ namespace Example
 }
 ```
 
+#### Using the AvailableOperationsAuthorizationInstanceWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Authorization Resource Options
+    ApiResponse<ResourceOptionsDto> response = apiInstance.AvailableOperationsAuthorizationInstanceWithHttpInfo(id);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AuthorizationApi.AvailableOperationsAuthorizationInstanceWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the authorization to be retrieved. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the authorization to be retrieved. |  |
 
 ### Return type
 
@@ -146,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -161,7 +207,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="createauthorization"></a>
+<a id="createauthorization"></a>
 # **CreateAuthorization**
 > AuthorizationDto CreateAuthorization (AuthorizationCreateDto authorizationCreateDto = null)
 
@@ -186,6 +232,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -200,8 +250,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.CreateAuthorization: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AuthorizationApi.CreateAuthorization: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -209,11 +259,31 @@ namespace Example
 }
 ```
 
+#### Using the CreateAuthorizationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create a New Authorization
+    ApiResponse<AuthorizationDto> response = apiInstance.CreateAuthorizationWithHttpInfo(authorizationCreateDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AuthorizationApi.CreateAuthorizationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **authorizationCreateDto** | [**AuthorizationCreateDto**](AuthorizationCreateDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **authorizationCreateDto** | [**AuthorizationCreateDto**](AuthorizationCreateDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -221,7 +291,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -233,13 +303,13 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **400** | Returned if some of the properties in the request body are invalid, for example if a permission parameter is not valid for the provided resourceType. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
-| **403** | The authenticated user is unauthorized to create an instance of this resource. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
-| **500** | The authorization could not be updated due to an internal server error. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **400** | Returned if some of the properties in the request body are invalid, for example if a permission parameter is not valid for the provided resourceType. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **403** | The authenticated user is unauthorized to create an instance of this resource. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **500** | The authorization could not be updated due to an internal server error. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteauthorization"></a>
+<a id="deleteauthorization"></a>
 # **DeleteAuthorization**
 > void DeleteAuthorization (string id)
 
@@ -264,11 +334,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new AuthorizationApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the authorization to be deleted.
+            var id = "id_example";  // string | The id of the authorization to be deleted.
 
             try
             {
@@ -277,8 +351,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.DeleteAuthorization: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AuthorizationApi.DeleteAuthorization: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -286,11 +360,28 @@ namespace Example
 }
 ```
 
+#### Using the DeleteAuthorizationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete Authorization
+    apiInstance.DeleteAuthorizationWithHttpInfo(id);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AuthorizationApi.DeleteAuthorizationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the authorization to be deleted. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the authorization to be deleted. |  |
 
 ### Return type
 
@@ -298,7 +389,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -310,12 +401,12 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **204** | Request successful. This method returns no content. |  -  |
-| **403** | If the authenticated user is unauthorized to delete the resource instance. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
-| **404** | Authorization cannot be found. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **403** | If the authenticated user is unauthorized to delete the resource instance. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **404** | Authorization cannot be found. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getauthorization"></a>
+<a id="getauthorization"></a>
 # **GetAuthorization**
 > AuthorizationDto GetAuthorization (string id)
 
@@ -340,11 +431,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new AuthorizationApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the authorization to be retrieved.
+            var id = "id_example";  // string | The id of the authorization to be retrieved.
 
             try
             {
@@ -354,8 +449,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.GetAuthorization: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorization: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -363,11 +458,31 @@ namespace Example
 }
 ```
 
+#### Using the GetAuthorizationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Authorization
+    ApiResponse<AuthorizationDto> response = apiInstance.GetAuthorizationWithHttpInfo(id);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the authorization to be retrieved. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the authorization to be retrieved. |  |
 
 ### Return type
 
@@ -375,7 +490,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -387,11 +502,11 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **404** | Authorization with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **404** | Authorization with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getauthorizationcount"></a>
+<a id="getauthorizationcount"></a>
 # **GetAuthorizationCount**
 > CountResultDto GetAuthorizationCount (string id = null, int? type = null, string userIdIn = null, string groupIdIn = null, int? resourceType = null, string resourceId = null)
 
@@ -416,16 +531,20 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new AuthorizationApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | Filter by the id of the authorization. (optional) 
-            var type = 56;  // int? | Filter by authorization type. (0=global, 1=grant, 2=revoke). See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/authorization-service/#authorization-type) for more information about authorization types. (optional) 
-            var userIdIn = userIdIn_example;  // string | Filter by a comma-separated list of userIds. (optional) 
-            var groupIdIn = groupIdIn_example;  // string | Filter by a comma-separated list of groupIds. (optional) 
-            var resourceType = 56;  // int? | Filter by an integer representation of the resource type. See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types. (optional) 
-            var resourceId = resourceId_example;  // string | Filter by resource id. (optional) 
+            var id = "id_example";  // string | Filter by the id of the authorization. (optional) 
+            var type = 56;  // int? | Filter by authorization type. (0=global, 1=grant, 2=revoke). See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/authorization-service/#authorization-type) for more information about authorization types. (optional) 
+            var userIdIn = "userIdIn_example";  // string | Filter by a comma-separated list of userIds. (optional) 
+            var groupIdIn = "groupIdIn_example";  // string | Filter by a comma-separated list of groupIds. (optional) 
+            var resourceType = 56;  // int? | Filter by an integer representation of the resource type. See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types. (optional) 
+            var resourceId = "resourceId_example";  // string | Filter by resource id. (optional) 
 
             try
             {
@@ -435,8 +554,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationCount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationCount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -444,16 +563,36 @@ namespace Example
 }
 ```
 
+#### Using the GetAuthorizationCountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Authorization Count
+    ApiResponse<CountResultDto> response = apiInstance.GetAuthorizationCountWithHttpInfo(id, type, userIdIn, groupIdIn, resourceType, resourceId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationCountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Filter by the id of the authorization. | [optional] 
- **type** | **int?**| Filter by authorization type. (0&#x3D;global, 1&#x3D;grant, 2&#x3D;revoke). See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/authorization-service/#authorization-type) for more information about authorization types. | [optional] 
- **userIdIn** | **string**| Filter by a comma-separated list of userIds. | [optional] 
- **groupIdIn** | **string**| Filter by a comma-separated list of groupIds. | [optional] 
- **resourceType** | **int?**| Filter by an integer representation of the resource type. See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types. | [optional] 
- **resourceId** | **string**| Filter by resource id. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | Filter by the id of the authorization. | [optional]  |
+| **type** | **int?** | Filter by authorization type. (0&#x3D;global, 1&#x3D;grant, 2&#x3D;revoke). See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/authorization-service/#authorization-type) for more information about authorization types. | [optional]  |
+| **userIdIn** | **string** | Filter by a comma-separated list of userIds. | [optional]  |
+| **groupIdIn** | **string** | Filter by a comma-separated list of groupIds. | [optional]  |
+| **resourceType** | **int?** | Filter by an integer representation of the resource type. See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types. | [optional]  |
+| **resourceId** | **string** | Filter by resource id. | [optional]  |
 
 ### Return type
 
@@ -461,7 +600,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -473,11 +612,11 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **400** | Returned if some of the query parameters are invalid, for example if a &#x60;sortOrder&#x60; parameter is supplied, but no &#x60;sortBy&#x60; is specified. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **400** | Returned if some of the query parameters are invalid, for example if a &#x60;sortOrder&#x60; parameter is supplied, but no &#x60;sortBy&#x60; is specified. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="isuserauthorized"></a>
+<a id="isuserauthorized"></a>
 # **IsUserAuthorized**
 > AuthorizationCheckResultDto IsUserAuthorized (string permissionName, string resourceName, int resourceType, string resourceId = null, string userId = null)
 
@@ -502,15 +641,19 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new AuthorizationApi(httpClient, config, httpClientHandler);
-            var permissionName = permissionName_example;  // string | String value representing the permission name to check for.
-            var resourceName = resourceName_example;  // string | String value for the name of the resource to check permissions for.
-            var resourceType = 56;  // int | An integer representing the resource type to check permissions for. See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types.
-            var resourceId = resourceId_example;  // string | The id of the resource to check permissions for. If left blank, a check for global permissions on the resource is performed. (optional) 
-            var userId = userId_example;  // string | The id of the user to check permissions for. The currently authenticated user must have a READ permission for the Authorization resource. If `userId` is blank, a check for the currently authenticated user is performed. (optional) 
+            var permissionName = "permissionName_example";  // string | String value representing the permission name to check for.
+            var resourceName = "resourceName_example";  // string | String value for the name of the resource to check permissions for.
+            var resourceType = 56;  // int | An integer representing the resource type to check permissions for. See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types.
+            var resourceId = "resourceId_example";  // string | The id of the resource to check permissions for. If left blank, a check for global permissions on the resource is performed. (optional) 
+            var userId = "userId_example";  // string | The id of the user to check permissions for. The currently authenticated user must have a READ permission for the Authorization resource. If `userId` is blank, a check for the currently authenticated user is performed. (optional) 
 
             try
             {
@@ -520,8 +663,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.IsUserAuthorized: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AuthorizationApi.IsUserAuthorized: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -529,15 +672,35 @@ namespace Example
 }
 ```
 
+#### Using the IsUserAuthorizedWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Perform an Authorization Check
+    ApiResponse<AuthorizationCheckResultDto> response = apiInstance.IsUserAuthorizedWithHttpInfo(permissionName, resourceName, resourceType, resourceId, userId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AuthorizationApi.IsUserAuthorizedWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **permissionName** | **string**| String value representing the permission name to check for. | 
- **resourceName** | **string**| String value for the name of the resource to check permissions for. | 
- **resourceType** | **int**| An integer representing the resource type to check permissions for. See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types. | 
- **resourceId** | **string**| The id of the resource to check permissions for. If left blank, a check for global permissions on the resource is performed. | [optional] 
- **userId** | **string**| The id of the user to check permissions for. The currently authenticated user must have a READ permission for the Authorization resource. If &#x60;userId&#x60; is blank, a check for the currently authenticated user is performed. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **permissionName** | **string** | String value representing the permission name to check for. |  |
+| **resourceName** | **string** | String value for the name of the resource to check permissions for. |  |
+| **resourceType** | **int** | An integer representing the resource type to check permissions for. See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types. |  |
+| **resourceId** | **string** | The id of the resource to check permissions for. If left blank, a check for global permissions on the resource is performed. | [optional]  |
+| **userId** | **string** | The id of the user to check permissions for. The currently authenticated user must have a READ permission for the Authorization resource. If &#x60;userId&#x60; is blank, a check for the currently authenticated user is performed. | [optional]  |
 
 ### Return type
 
@@ -545,7 +708,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -557,20 +720,20 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **400** | Returned if some of the query parameters are invalid, for example if a permission parameterName is not valid for the provided resourceType. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
-| **401** | The user is not authenticated. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
-| **403** | When a &#x60;userId&#x60; is passed and the user does not possess a READ permission for the Authorization resource. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
-| **404** | Authorization with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **400** | Returned if some of the query parameters are invalid, for example if a permission parameterName is not valid for the provided resourceType. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **401** | The user is not authenticated. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **403** | When a &#x60;userId&#x60; is passed and the user does not possess a READ permission for the Authorization resource. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **404** | Authorization with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="queryauthorizations"></a>
+<a id="queryauthorizations"></a>
 # **QueryAuthorizations**
 > List&lt;AuthorizationDto&gt; QueryAuthorizations (string id = null, int? type = null, string userIdIn = null, string groupIdIn = null, int? resourceType = null, string resourceId = null, string sortBy = null, string sortOrder = null, int? firstResult = null, int? maxResults = null)
 
 Get Authorizations
 
-Queries for a list of authorizations using a list of parameters. The size of the result set can be retrieved by using the [Get Authorization Count](https://docs.camunda.org/manual/7.17/reference/rest/authorization/get-query-count/) method.
+Queries for a list of authorizations using a list of parameters. The size of the result set can be retrieved by using the [Get Authorization Count](https://docs.camunda.org/manual/7.21/reference/rest/authorization/get-query-count/) method.
 
 ### Example
 ```csharp
@@ -589,18 +752,22 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new AuthorizationApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | Filter by the id of the authorization. (optional) 
-            var type = 56;  // int? | Filter by authorization type. (0=global, 1=grant, 2=revoke). See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/authorization-service/#authorization-type) for more information about authorization types. (optional) 
-            var userIdIn = userIdIn_example;  // string | Filter by a comma-separated list of userIds. (optional) 
-            var groupIdIn = groupIdIn_example;  // string | Filter by a comma-separated list of groupIds. (optional) 
-            var resourceType = 56;  // int? | Filter by an integer representation of the resource type. See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types. (optional) 
-            var resourceId = resourceId_example;  // string | Filter by resource id. (optional) 
-            var sortBy = sortBy_example;  // string | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. (optional) 
+            var id = "id_example";  // string | Filter by the id of the authorization. (optional) 
+            var type = 56;  // int? | Filter by authorization type. (0=global, 1=grant, 2=revoke). See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/authorization-service/#authorization-type) for more information about authorization types. (optional) 
+            var userIdIn = "userIdIn_example";  // string | Filter by a comma-separated list of userIds. (optional) 
+            var groupIdIn = "groupIdIn_example";  // string | Filter by a comma-separated list of groupIds. (optional) 
+            var resourceType = 56;  // int? | Filter by an integer representation of the resource type. See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types. (optional) 
+            var resourceId = "resourceId_example";  // string | Filter by resource id. (optional) 
+            var sortBy = "resourceType";  // string | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. (optional) 
+            var sortOrder = "asc";  // string | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. (optional) 
             var firstResult = 56;  // int? | Pagination of results. Specifies the index of the first result to return. (optional) 
             var maxResults = 56;  // int? | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. (optional) 
 
@@ -612,8 +779,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.QueryAuthorizations: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AuthorizationApi.QueryAuthorizations: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -621,20 +788,40 @@ namespace Example
 }
 ```
 
+#### Using the QueryAuthorizationsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Authorizations
+    ApiResponse<List<AuthorizationDto>> response = apiInstance.QueryAuthorizationsWithHttpInfo(id, type, userIdIn, groupIdIn, resourceType, resourceId, sortBy, sortOrder, firstResult, maxResults);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AuthorizationApi.QueryAuthorizationsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| Filter by the id of the authorization. | [optional] 
- **type** | **int?**| Filter by authorization type. (0&#x3D;global, 1&#x3D;grant, 2&#x3D;revoke). See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/authorization-service/#authorization-type) for more information about authorization types. | [optional] 
- **userIdIn** | **string**| Filter by a comma-separated list of userIds. | [optional] 
- **groupIdIn** | **string**| Filter by a comma-separated list of groupIds. | [optional] 
- **resourceType** | **int?**| Filter by an integer representation of the resource type. See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types. | [optional] 
- **resourceId** | **string**| Filter by resource id. | [optional] 
- **sortBy** | **string**| Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. | [optional] 
- **sortOrder** | **string**| Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. | [optional] 
- **firstResult** | **int?**| Pagination of results. Specifies the index of the first result to return. | [optional] 
- **maxResults** | **int?**| Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | Filter by the id of the authorization. | [optional]  |
+| **type** | **int?** | Filter by authorization type. (0&#x3D;global, 1&#x3D;grant, 2&#x3D;revoke). See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/authorization-service/#authorization-type) for more information about authorization types. | [optional]  |
+| **userIdIn** | **string** | Filter by a comma-separated list of userIds. | [optional]  |
+| **groupIdIn** | **string** | Filter by a comma-separated list of groupIds. | [optional]  |
+| **resourceType** | **int?** | Filter by an integer representation of the resource type. See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/authorization-service/#resources) for a list of integer representations of resource types. | [optional]  |
+| **resourceId** | **string** | Filter by resource id. | [optional]  |
+| **sortBy** | **string** | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. | [optional]  |
+| **sortOrder** | **string** | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. | [optional]  |
+| **firstResult** | **int?** | Pagination of results. Specifies the index of the first result to return. | [optional]  |
+| **maxResults** | **int?** | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional]  |
 
 ### Return type
 
@@ -642,7 +829,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -654,11 +841,11 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **400** | Returned if some of the query parameters are invalid, for example if a &#x60;sortOrder&#x60; parameter is supplied, but no &#x60;sortBy&#x60; is specified. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **400** | Returned if some of the query parameters are invalid, for example if a &#x60;sortOrder&#x60; parameter is supplied, but no &#x60;sortBy&#x60; is specified. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updateauthorization"></a>
+<a id="updateauthorization"></a>
 # **UpdateAuthorization**
 > void UpdateAuthorization (string id, AuthorizationUpdateDto authorizationUpdateDto = null)
 
@@ -683,11 +870,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new AuthorizationApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the authorization to be updated.
+            var id = "id_example";  // string | The id of the authorization to be updated.
             var authorizationUpdateDto = new AuthorizationUpdateDto(); // AuthorizationUpdateDto |  (optional) 
 
             try
@@ -697,8 +888,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling AuthorizationApi.UpdateAuthorization: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling AuthorizationApi.UpdateAuthorization: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -706,12 +897,29 @@ namespace Example
 }
 ```
 
+#### Using the UpdateAuthorizationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update an Authorization
+    apiInstance.UpdateAuthorizationWithHttpInfo(id, authorizationUpdateDto);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling AuthorizationApi.UpdateAuthorizationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the authorization to be updated. | 
- **authorizationUpdateDto** | [**AuthorizationUpdateDto**](AuthorizationUpdateDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the authorization to be updated. |  |
+| **authorizationUpdateDto** | [**AuthorizationUpdateDto**](AuthorizationUpdateDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -719,7 +927,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -731,10 +939,10 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **204** | Request successful. This method returns no content. |  -  |
-| **400** | Returned if some of the properties in the request body are invalid, for example if a permission parameter is not valid for the provided resourceType. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
-| **403** | The authenticated user is unauthorized to update this resource. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **400** | Returned if some of the properties in the request body are invalid, for example if a permission parameter is not valid for the provided resourceType. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **403** | The authenticated user is unauthorized to update this resource. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 | **404** | The authorization with the requested Id cannot be found. |  -  |
-| **500** | The authorization could not be updated due to an internal server error. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **500** | The authorization could not be updated due to an internal server error. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

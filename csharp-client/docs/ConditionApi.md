@@ -2,18 +2,17 @@
 
 All URIs are relative to *http://localhost:8080/engine-rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**EvaluateCondition**](ConditionApi.md#evaluatecondition) | **POST** /condition | Evaluate
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**EvaluateCondition**](ConditionApi.md#evaluatecondition) | **POST** /condition | Evaluate |
 
-
-<a name="evaluatecondition"></a>
+<a id="evaluatecondition"></a>
 # **EvaluateCondition**
 > List&lt;ProcessInstanceDto&gt; EvaluateCondition (EvaluationConditionDto evaluationConditionDto = null)
 
 Evaluate
 
-Triggers evaluation of conditions for conditional start event(s).  Internally this maps to the engines condition evaluation builder method ConditionEvaluationBuilder#evaluateStartConditions().  For more information see the [Conditional Start Events](https://docs.camunda.org/manual/7.17/reference/bpmn20/events/conditional-events/#conditional-start-event) section of the [BPMN 2.0 Implementation Reference](https://docs.camunda.org/manual/7.17/reference/bpmn20/).
+Triggers evaluation of conditions for conditional start event(s).  Internally this maps to the engines condition evaluation builder method ConditionEvaluationBuilder#evaluateStartConditions().  For more information see the [Conditional Start Events](https://docs.camunda.org/manual/7.21/reference/bpmn20/events/conditional-events/#conditional-start-event) section of the [BPMN 2.0 Implementation Reference](https://docs.camunda.org/manual/7.21/reference/bpmn20/).
 
 ### Example
 ```csharp
@@ -32,6 +31,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -46,8 +49,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ConditionApi.EvaluateCondition: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ConditionApi.EvaluateCondition: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -55,11 +58,31 @@ namespace Example
 }
 ```
 
+#### Using the EvaluateConditionWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Evaluate
+    ApiResponse<List<ProcessInstanceDto>> response = apiInstance.EvaluateConditionWithHttpInfo(evaluationConditionDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ConditionApi.EvaluateConditionWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **evaluationConditionDto** | [**EvaluationConditionDto**](EvaluationConditionDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **evaluationConditionDto** | [**EvaluationConditionDto**](EvaluationConditionDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -67,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 

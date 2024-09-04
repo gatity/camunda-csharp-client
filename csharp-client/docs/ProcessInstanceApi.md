@@ -2,36 +2,36 @@
 
 All URIs are relative to *http://localhost:8080/engine-rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CorrelateMessageAsyncOperation**](ProcessInstanceApi.md#correlatemessageasyncoperation) | **POST** /process-instance/message-async | Correlate Message Async (POST)
-[**DeleteAsyncHistoricQueryBased**](ProcessInstanceApi.md#deleteasynchistoricquerybased) | **POST** /process-instance/delete-historic-query-based | Delete Async Historic Query Based (POST)
-[**DeleteProcessInstance**](ProcessInstanceApi.md#deleteprocessinstance) | **DELETE** /process-instance/{id} | Delete
-[**DeleteProcessInstanceVariable**](ProcessInstanceApi.md#deleteprocessinstancevariable) | **DELETE** /process-instance/{id}/variables/{varName} | Delete Process Variable
-[**DeleteProcessInstancesAsyncOperation**](ProcessInstanceApi.md#deleteprocessinstancesasyncoperation) | **POST** /process-instance/delete | Delete Async (POST)
-[**GetActivityInstanceTree**](ProcessInstanceApi.md#getactivityinstancetree) | **GET** /process-instance/{id}/activity-instances | Get Activity Instance
-[**GetProcessInstance**](ProcessInstanceApi.md#getprocessinstance) | **GET** /process-instance/{id} | Get Process Instance
-[**GetProcessInstanceVariable**](ProcessInstanceApi.md#getprocessinstancevariable) | **GET** /process-instance/{id}/variables/{varName} | Get Process Variable
-[**GetProcessInstanceVariableBinary**](ProcessInstanceApi.md#getprocessinstancevariablebinary) | **GET** /process-instance/{id}/variables/{varName}/data | Get Process Variable (Binary)
-[**GetProcessInstanceVariables**](ProcessInstanceApi.md#getprocessinstancevariables) | **GET** /process-instance/{id}/variables | Get Process Variables
-[**GetProcessInstances**](ProcessInstanceApi.md#getprocessinstances) | **GET** /process-instance | Get List
-[**GetProcessInstancesCount**](ProcessInstanceApi.md#getprocessinstancescount) | **GET** /process-instance/count | Get List Count
-[**ModifyProcessInstance**](ProcessInstanceApi.md#modifyprocessinstance) | **POST** /process-instance/{id}/modification | Modify Process Instance Execution State
-[**ModifyProcessInstanceAsyncOperation**](ProcessInstanceApi.md#modifyprocessinstanceasyncoperation) | **POST** /process-instance/{id}/modification-async | Modify Process Instance Execution State Async
-[**ModifyProcessInstanceVariables**](ProcessInstanceApi.md#modifyprocessinstancevariables) | **POST** /process-instance/{id}/variables | Update/Delete Process Variables
-[**QueryProcessInstances**](ProcessInstanceApi.md#queryprocessinstances) | **POST** /process-instance | Get List (POST)
-[**QueryProcessInstancesCount**](ProcessInstanceApi.md#queryprocessinstancescount) | **POST** /process-instance/count | Get List Count (POST)
-[**SetProcessInstanceVariable**](ProcessInstanceApi.md#setprocessinstancevariable) | **PUT** /process-instance/{id}/variables/{varName} | Update Process Variable
-[**SetProcessInstanceVariableBinary**](ProcessInstanceApi.md#setprocessinstancevariablebinary) | **POST** /process-instance/{id}/variables/{varName}/data | Update Process Variable (Binary)
-[**SetRetriesByProcess**](ProcessInstanceApi.md#setretriesbyprocess) | **POST** /process-instance/job-retries | Set Job Retries Async (POST)
-[**SetRetriesByProcessHistoricQueryBased**](ProcessInstanceApi.md#setretriesbyprocesshistoricquerybased) | **POST** /process-instance/job-retries-historic-query-based | Set Job Retries Async Historic Query Based (POST)
-[**SetVariablesAsyncOperation**](ProcessInstanceApi.md#setvariablesasyncoperation) | **POST** /process-instance/variables-async | Set Variables Async (POST)
-[**UpdateSuspensionState**](ProcessInstanceApi.md#updatesuspensionstate) | **PUT** /process-instance/suspended | Activate/Suspend In Group
-[**UpdateSuspensionStateAsyncOperation**](ProcessInstanceApi.md#updatesuspensionstateasyncoperation) | **POST** /process-instance/suspended-async | Activate/Suspend In Batch
-[**UpdateSuspensionStateById**](ProcessInstanceApi.md#updatesuspensionstatebyid) | **PUT** /process-instance/{id}/suspended | Activate/Suspend Process Instance By Id
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**CorrelateMessageAsyncOperation**](ProcessInstanceApi.md#correlatemessageasyncoperation) | **POST** /process-instance/message-async | Correlate Message Async (POST) |
+| [**DeleteAsyncHistoricQueryBased**](ProcessInstanceApi.md#deleteasynchistoricquerybased) | **POST** /process-instance/delete-historic-query-based | Delete Async Historic Query Based (POST) |
+| [**DeleteProcessInstance**](ProcessInstanceApi.md#deleteprocessinstance) | **DELETE** /process-instance/{id} | Delete |
+| [**DeleteProcessInstanceVariable**](ProcessInstanceApi.md#deleteprocessinstancevariable) | **DELETE** /process-instance/{id}/variables/{varName} | Delete Process Variable |
+| [**DeleteProcessInstancesAsyncOperation**](ProcessInstanceApi.md#deleteprocessinstancesasyncoperation) | **POST** /process-instance/delete | Delete Async (POST) |
+| [**GetActivityInstanceTree**](ProcessInstanceApi.md#getactivityinstancetree) | **GET** /process-instance/{id}/activity-instances | Get Activity Instance |
+| [**GetProcessInstance**](ProcessInstanceApi.md#getprocessinstance) | **GET** /process-instance/{id} | Get Process Instance |
+| [**GetProcessInstanceComments**](ProcessInstanceApi.md#getprocessinstancecomments) | **GET** /process-instance/{id}/comment | Get Process Instance Comments |
+| [**GetProcessInstanceVariable**](ProcessInstanceApi.md#getprocessinstancevariable) | **GET** /process-instance/{id}/variables/{varName} | Get Process Variable |
+| [**GetProcessInstanceVariableBinary**](ProcessInstanceApi.md#getprocessinstancevariablebinary) | **GET** /process-instance/{id}/variables/{varName}/data | Get Process Variable (Binary) |
+| [**GetProcessInstanceVariables**](ProcessInstanceApi.md#getprocessinstancevariables) | **GET** /process-instance/{id}/variables | Get Process Variables |
+| [**GetProcessInstances**](ProcessInstanceApi.md#getprocessinstances) | **GET** /process-instance | Get List |
+| [**GetProcessInstancesCount**](ProcessInstanceApi.md#getprocessinstancescount) | **GET** /process-instance/count | Get List Count |
+| [**ModifyProcessInstance**](ProcessInstanceApi.md#modifyprocessinstance) | **POST** /process-instance/{id}/modification | Modify Process Instance Execution State |
+| [**ModifyProcessInstanceAsyncOperation**](ProcessInstanceApi.md#modifyprocessinstanceasyncoperation) | **POST** /process-instance/{id}/modification-async | Modify Process Instance Execution State Async |
+| [**ModifyProcessInstanceVariables**](ProcessInstanceApi.md#modifyprocessinstancevariables) | **POST** /process-instance/{id}/variables | Update/Delete Process Variables |
+| [**QueryProcessInstances**](ProcessInstanceApi.md#queryprocessinstances) | **POST** /process-instance | Get List (POST) |
+| [**QueryProcessInstancesCount**](ProcessInstanceApi.md#queryprocessinstancescount) | **POST** /process-instance/count | Get List Count (POST) |
+| [**SetProcessInstanceVariable**](ProcessInstanceApi.md#setprocessinstancevariable) | **PUT** /process-instance/{id}/variables/{varName} | Update Process Variable |
+| [**SetProcessInstanceVariableBinary**](ProcessInstanceApi.md#setprocessinstancevariablebinary) | **POST** /process-instance/{id}/variables/{varName}/data | Update Process Variable (Binary) |
+| [**SetRetriesByProcess**](ProcessInstanceApi.md#setretriesbyprocess) | **POST** /process-instance/job-retries | Set Job Retries Async (POST) |
+| [**SetRetriesByProcessHistoricQueryBased**](ProcessInstanceApi.md#setretriesbyprocesshistoricquerybased) | **POST** /process-instance/job-retries-historic-query-based | Set Job Retries Async Historic Query Based (POST) |
+| [**SetVariablesAsyncOperation**](ProcessInstanceApi.md#setvariablesasyncoperation) | **POST** /process-instance/variables-async | Set Variables Async (POST) |
+| [**UpdateSuspensionState**](ProcessInstanceApi.md#updatesuspensionstate) | **PUT** /process-instance/suspended | Activate/Suspend In Group |
+| [**UpdateSuspensionStateAsyncOperation**](ProcessInstanceApi.md#updatesuspensionstateasyncoperation) | **POST** /process-instance/suspended-async | Activate/Suspend In Batch |
+| [**UpdateSuspensionStateById**](ProcessInstanceApi.md#updatesuspensionstatebyid) | **PUT** /process-instance/{id}/suspended | Activate/Suspend Process Instance By Id |
 
-
-<a name="correlatemessageasyncoperation"></a>
+<a id="correlatemessageasyncoperation"></a>
 # **CorrelateMessageAsyncOperation**
 > BatchDto CorrelateMessageAsyncOperation (CorrelationMessageAsyncDto correlationMessageAsyncDto = null)
 
@@ -56,6 +56,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -70,8 +74,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.CorrelateMessageAsyncOperation: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.CorrelateMessageAsyncOperation: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -79,11 +83,31 @@ namespace Example
 }
 ```
 
+#### Using the CorrelateMessageAsyncOperationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Correlate Message Async (POST)
+    ApiResponse<BatchDto> response = apiInstance.CorrelateMessageAsyncOperationWithHttpInfo(correlationMessageAsyncDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.CorrelateMessageAsyncOperationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **correlationMessageAsyncDto** | [**CorrelationMessageAsyncDto**](CorrelationMessageAsyncDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **correlationMessageAsyncDto** | [**CorrelationMessageAsyncDto**](CorrelationMessageAsyncDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -91,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -104,11 +128,11 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
 | **400** | Bad Request * If none of &#x60;processInstanceIds&#x60;, &#x60;processInstanceQuery&#x60;, and &#x60;historicProcessInstanceQuery&#x60; is given * If no process instance ids where found |  -  |
-| **403** | Returned if the user is not allowed to create the batch.  See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **403** | Returned if the user is not allowed to create the batch.  See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteasynchistoricquerybased"></a>
+<a id="deleteasynchistoricquerybased"></a>
 # **DeleteAsyncHistoricQueryBased**
 > BatchDto DeleteAsyncHistoricQueryBased (DeleteProcessInstancesDto deleteProcessInstancesDto = null)
 
@@ -133,6 +157,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -147,8 +175,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.DeleteAsyncHistoricQueryBased: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.DeleteAsyncHistoricQueryBased: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -156,11 +184,31 @@ namespace Example
 }
 ```
 
+#### Using the DeleteAsyncHistoricQueryBasedWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete Async Historic Query Based (POST)
+    ApiResponse<BatchDto> response = apiInstance.DeleteAsyncHistoricQueryBasedWithHttpInfo(deleteProcessInstancesDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.DeleteAsyncHistoricQueryBasedWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **deleteProcessInstancesDto** | [**DeleteProcessInstancesDto**](DeleteProcessInstancesDto.md)| **Unallowed property**: &#x60;processInstanceQuery&#x60; | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **deleteProcessInstancesDto** | [**DeleteProcessInstancesDto**](DeleteProcessInstancesDto.md) | **Unallowed property**: &#x60;processInstanceQuery&#x60; | [optional]  |
 
 ### Return type
 
@@ -168,7 +216,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -184,7 +232,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteprocessinstance"></a>
+<a id="deleteprocessinstance"></a>
 # **DeleteProcessInstance**
 > void DeleteProcessInstance (string id, bool? skipCustomListeners = null, bool? skipIoMappings = null, bool? skipSubprocesses = null, bool? failIfNotExists = null)
 
@@ -209,14 +257,18 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to be deleted.
-            var skipCustomListeners = true;  // bool? | If set to true, the custom listeners will be skipped. (optional)  (default to false)
-            var skipIoMappings = true;  // bool? | If set to true, the input/output mappings will be skipped. (optional)  (default to false)
-            var skipSubprocesses = true;  // bool? | If set to true, subprocesses related to deleted processes will be skipped. (optional)  (default to false)
+            var id = "id_example";  // string | The id of the process instance to be deleted.
+            var skipCustomListeners = false;  // bool? | If set to true, the custom listeners will be skipped. (optional)  (default to false)
+            var skipIoMappings = false;  // bool? | If set to true, the input/output mappings will be skipped. (optional)  (default to false)
+            var skipSubprocesses = false;  // bool? | If set to true, subprocesses related to deleted processes will be skipped. (optional)  (default to false)
             var failIfNotExists = true;  // bool? | If set to false, the request will still be successful if the process id is not found. (optional)  (default to true)
 
             try
@@ -226,8 +278,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.DeleteProcessInstance: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.DeleteProcessInstance: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -235,15 +287,32 @@ namespace Example
 }
 ```
 
+#### Using the DeleteProcessInstanceWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete
+    apiInstance.DeleteProcessInstanceWithHttpInfo(id, skipCustomListeners, skipIoMappings, skipSubprocesses, failIfNotExists);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.DeleteProcessInstanceWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to be deleted. | 
- **skipCustomListeners** | **bool?**| If set to true, the custom listeners will be skipped. | [optional] [default to false]
- **skipIoMappings** | **bool?**| If set to true, the input/output mappings will be skipped. | [optional] [default to false]
- **skipSubprocesses** | **bool?**| If set to true, subprocesses related to deleted processes will be skipped. | [optional] [default to false]
- **failIfNotExists** | **bool?**| If set to false, the request will still be successful if the process id is not found. | [optional] [default to true]
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to be deleted. |  |
+| **skipCustomListeners** | **bool?** | If set to true, the custom listeners will be skipped. | [optional] [default to false] |
+| **skipIoMappings** | **bool?** | If set to true, the input/output mappings will be skipped. | [optional] [default to false] |
+| **skipSubprocesses** | **bool?** | If set to true, subprocesses related to deleted processes will be skipped. | [optional] [default to false] |
+| **failIfNotExists** | **bool?** | If set to false, the request will still be successful if the process id is not found. | [optional] [default to true] |
 
 ### Return type
 
@@ -251,7 +320,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -267,7 +336,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteprocessinstancevariable"></a>
+<a id="deleteprocessinstancevariable"></a>
 # **DeleteProcessInstanceVariable**
 > void DeleteProcessInstanceVariable (string id, string varName)
 
@@ -292,12 +361,16 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to delete the variable from.
-            var varName = varName_example;  // string | The name of the variable to delete.
+            var id = "id_example";  // string | The id of the process instance to delete the variable from.
+            var varName = "varName_example";  // string | The name of the variable to delete.
 
             try
             {
@@ -306,8 +379,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.DeleteProcessInstanceVariable: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.DeleteProcessInstanceVariable: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -315,12 +388,29 @@ namespace Example
 }
 ```
 
+#### Using the DeleteProcessInstanceVariableWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete Process Variable
+    apiInstance.DeleteProcessInstanceVariableWithHttpInfo(id, varName);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.DeleteProcessInstanceVariableWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to delete the variable from. | 
- **varName** | **string**| The name of the variable to delete. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to delete the variable from. |  |
+| **varName** | **string** | The name of the variable to delete. |  |
 
 ### Return type
 
@@ -328,7 +418,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -343,7 +433,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deleteprocessinstancesasyncoperation"></a>
+<a id="deleteprocessinstancesasyncoperation"></a>
 # **DeleteProcessInstancesAsyncOperation**
 > BatchDto DeleteProcessInstancesAsyncOperation (DeleteProcessInstancesDto deleteProcessInstancesDto = null)
 
@@ -368,6 +458,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -382,8 +476,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.DeleteProcessInstancesAsyncOperation: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.DeleteProcessInstancesAsyncOperation: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -391,11 +485,31 @@ namespace Example
 }
 ```
 
+#### Using the DeleteProcessInstancesAsyncOperationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete Async (POST)
+    ApiResponse<BatchDto> response = apiInstance.DeleteProcessInstancesAsyncOperationWithHttpInfo(deleteProcessInstancesDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.DeleteProcessInstancesAsyncOperationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **deleteProcessInstancesDto** | [**DeleteProcessInstancesDto**](DeleteProcessInstancesDto.md)| **Unallowed property**: &#x60;historicProcessInstanceQuery&#x60; | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **deleteProcessInstancesDto** | [**DeleteProcessInstancesDto**](DeleteProcessInstancesDto.md) | **Unallowed property**: &#x60;historicProcessInstanceQuery&#x60; | [optional]  |
 
 ### Return type
 
@@ -403,7 +517,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -419,7 +533,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getactivityinstancetree"></a>
+<a id="getactivityinstancetree"></a>
 # **GetActivityInstanceTree**
 > ActivityInstanceDto GetActivityInstanceTree (string id)
 
@@ -444,11 +558,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance for which the activity instance should be retrieved.
+            var id = "id_example";  // string | The id of the process instance for which the activity instance should be retrieved.
 
             try
             {
@@ -458,8 +576,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.GetActivityInstanceTree: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.GetActivityInstanceTree: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -467,11 +585,31 @@ namespace Example
 }
 ```
 
+#### Using the GetActivityInstanceTreeWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Activity Instance
+    ApiResponse<ActivityInstanceDto> response = apiInstance.GetActivityInstanceTreeWithHttpInfo(id);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.GetActivityInstanceTreeWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance for which the activity instance should be retrieved. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance for which the activity instance should be retrieved. |  |
 
 ### Return type
 
@@ -479,7 +617,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -495,7 +633,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getprocessinstance"></a>
+<a id="getprocessinstance"></a>
 # **GetProcessInstance**
 > ProcessInstanceDto GetProcessInstance (string id)
 
@@ -520,11 +658,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to be retrieved.
+            var id = "id_example";  // string | The id of the process instance to be retrieved.
 
             try
             {
@@ -534,8 +676,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstance: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstance: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -543,11 +685,31 @@ namespace Example
 }
 ```
 
+#### Using the GetProcessInstanceWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Process Instance
+    ApiResponse<ProcessInstanceDto> response = apiInstance.GetProcessInstanceWithHttpInfo(id);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to be retrieved. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to be retrieved. |  |
 
 ### Return type
 
@@ -555,7 +717,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -567,11 +729,111 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **404** | Process instance with given id does not exist. See the  [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **404** | Process instance with given id does not exist. See the  [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getprocessinstancevariable"></a>
+<a id="getprocessinstancecomments"></a>
+# **GetProcessInstanceComments**
+> List&lt;CommentDto&gt; GetProcessInstanceComments (string id)
+
+Get Process Instance Comments
+
+Gets the comments for a process instance by id.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Net.Http;
+using Camunda.OpenApi.Client.Api;
+using Camunda.OpenApi.Client.Client;
+using Camunda.OpenApi.Client.Model;
+
+namespace Example
+{
+    public class GetProcessInstanceCommentsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
+            // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
+            HttpClient httpClient = new HttpClient();
+            HttpClientHandler httpClientHandler = new HttpClientHandler();
+            var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
+            var id = "id_example";  // string | The id of the process instance to retrieve the comments for.
+
+            try
+            {
+                // Get Process Instance Comments
+                List<CommentDto> result = apiInstance.GetProcessInstanceComments(id);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceComments: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetProcessInstanceCommentsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Process Instance Comments
+    ApiResponse<List<CommentDto>> response = apiInstance.GetProcessInstanceCommentsWithHttpInfo(id);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceCommentsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to retrieve the comments for. |  |
+
+### Return type
+
+[**List&lt;CommentDto&gt;**](CommentDto.md)
+
+### Authorization
+
+[basicAuth](../README.md#basicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | Request successful. |  -  |
+| **404** | No process instance exists for the given process instance id. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a id="getprocessinstancevariable"></a>
 # **GetProcessInstanceVariable**
 > VariableValueDto GetProcessInstanceVariable (string id, string varName, bool? deserializeValue = null)
 
@@ -596,12 +858,16 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to retrieve the variable for.
-            var varName = varName_example;  // string | The name of the variable to retrieve.
+            var id = "id_example";  // string | The id of the process instance to retrieve the variable for.
+            var varName = "varName_example";  // string | The name of the variable to retrieve.
             var deserializeValue = true;  // bool? | Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).  If set to true, a serializable variable will be deserialized on server side and transformed to JSON using [Jackson's](https://github.com/FasterXML/jackson) POJO/bean property introspection feature. Note that this requires the Java classes of the variable value to be on the REST API's classpath.  If set to false, a serializable variable will be returned in its serialized format. For example, a variable that is serialized as XML will be returned as a JSON string containing XML.  Note: While true is the default value for reasons of backward compatibility, we recommend setting this parameter to false when developing web applications that are independent of the Java process applications deployed to the engine. (optional)  (default to true)
 
             try
@@ -612,8 +878,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceVariable: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceVariable: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -621,13 +887,33 @@ namespace Example
 }
 ```
 
+#### Using the GetProcessInstanceVariableWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Process Variable
+    ApiResponse<VariableValueDto> response = apiInstance.GetProcessInstanceVariableWithHttpInfo(id, varName, deserializeValue);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceVariableWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to retrieve the variable for. | 
- **varName** | **string**| The name of the variable to retrieve. | 
- **deserializeValue** | **bool?**| Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).  If set to true, a serializable variable will be deserialized on server side and transformed to JSON using [Jackson&#39;s](https://github.com/FasterXML/jackson) POJO/bean property introspection feature. Note that this requires the Java classes of the variable value to be on the REST API&#39;s classpath.  If set to false, a serializable variable will be returned in its serialized format. For example, a variable that is serialized as XML will be returned as a JSON string containing XML.  Note: While true is the default value for reasons of backward compatibility, we recommend setting this parameter to false when developing web applications that are independent of the Java process applications deployed to the engine. | [optional] [default to true]
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to retrieve the variable for. |  |
+| **varName** | **string** | The name of the variable to retrieve. |  |
+| **deserializeValue** | **bool?** | Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).  If set to true, a serializable variable will be deserialized on server side and transformed to JSON using [Jackson&#39;s](https://github.com/FasterXML/jackson) POJO/bean property introspection feature. Note that this requires the Java classes of the variable value to be on the REST API&#39;s classpath.  If set to false, a serializable variable will be returned in its serialized format. For example, a variable that is serialized as XML will be returned as a JSON string containing XML.  Note: While true is the default value for reasons of backward compatibility, we recommend setting this parameter to false when developing web applications that are independent of the Java process applications deployed to the engine. | [optional] [default to true] |
 
 ### Return type
 
@@ -635,7 +921,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -651,7 +937,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getprocessinstancevariablebinary"></a>
+<a id="getprocessinstancevariablebinary"></a>
 # **GetProcessInstanceVariableBinary**
 > FileParameter GetProcessInstanceVariableBinary (string id, string varName)
 
@@ -676,12 +962,16 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to retrieve the variable for.
-            var varName = varName_example;  // string | The name of the variable to retrieve.
+            var id = "id_example";  // string | The id of the process instance to retrieve the variable for.
+            var varName = "varName_example";  // string | The name of the variable to retrieve.
 
             try
             {
@@ -691,8 +981,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceVariableBinary: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceVariableBinary: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -700,12 +990,32 @@ namespace Example
 }
 ```
 
+#### Using the GetProcessInstanceVariableBinaryWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Process Variable (Binary)
+    ApiResponse<FileParameter> response = apiInstance.GetProcessInstanceVariableBinaryWithHttpInfo(id, varName);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceVariableBinaryWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to retrieve the variable for. | 
- **varName** | **string**| The name of the variable to retrieve. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to retrieve the variable for. |  |
+| **varName** | **string** | The name of the variable to retrieve. |  |
 
 ### Return type
 
@@ -713,7 +1023,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -730,7 +1040,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getprocessinstancevariables"></a>
+<a id="getprocessinstancevariables"></a>
 # **GetProcessInstanceVariables**
 > Dictionary&lt;string, VariableValueDto&gt; GetProcessInstanceVariables (string id, bool? deserializeValues = null)
 
@@ -755,11 +1065,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to retrieve the variables from.
+            var id = "id_example";  // string | The id of the process instance to retrieve the variables from.
             var deserializeValues = true;  // bool? | Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).  If set to true, a serializable variable will be deserialized on server side and transformed to JSON using [Jackson's](https://github.com/FasterXML/jackson) POJO/bean property introspection feature. Note that this requires the Java classes of the variable value to be on the REST API's classpath.  If set to false, a serializable variable will be returned in its serialized format. For example, a variable that is serialized as XML will be returned as a JSON string containing XML.  Note: While true is the default value for reasons of backward compatibility, we recommend setting this parameter to false when developing web applications that are independent of the Java process applications deployed to the engine. (optional)  (default to true)
 
             try
@@ -770,8 +1084,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceVariables: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceVariables: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -779,12 +1093,32 @@ namespace Example
 }
 ```
 
+#### Using the GetProcessInstanceVariablesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Process Variables
+    ApiResponse<Dictionary<string, VariableValueDto>> response = apiInstance.GetProcessInstanceVariablesWithHttpInfo(id, deserializeValues);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstanceVariablesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to retrieve the variables from. | 
- **deserializeValues** | **bool?**| Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).  If set to true, a serializable variable will be deserialized on server side and transformed to JSON using [Jackson&#39;s](https://github.com/FasterXML/jackson) POJO/bean property introspection feature. Note that this requires the Java classes of the variable value to be on the REST API&#39;s classpath.  If set to false, a serializable variable will be returned in its serialized format. For example, a variable that is serialized as XML will be returned as a JSON string containing XML.  Note: While true is the default value for reasons of backward compatibility, we recommend setting this parameter to false when developing web applications that are independent of the Java process applications deployed to the engine. | [optional] [default to true]
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to retrieve the variables from. |  |
+| **deserializeValues** | **bool?** | Determines whether serializable variable values (typically variables that store custom Java objects) should be deserialized on server side (default true).  If set to true, a serializable variable will be deserialized on server side and transformed to JSON using [Jackson&#39;s](https://github.com/FasterXML/jackson) POJO/bean property introspection feature. Note that this requires the Java classes of the variable value to be on the REST API&#39;s classpath.  If set to false, a serializable variable will be returned in its serialized format. For example, a variable that is serialized as XML will be returned as a JSON string containing XML.  Note: While true is the default value for reasons of backward compatibility, we recommend setting this parameter to false when developing web applications that are independent of the Java process applications deployed to the engine. | [optional] [default to true] |
 
 ### Return type
 
@@ -792,7 +1126,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -808,7 +1142,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getprocessinstances"></a>
+<a id="getprocessinstances"></a>
 # **GetProcessInstances**
 > List&lt;ProcessInstanceDto&gt; GetProcessInstances (string sortBy = null, string sortOrder = null, int? firstResult = null, int? maxResults = null, string processInstanceIds = null, string businessKey = null, string businessKeyLike = null, string caseInstanceId = null, string processDefinitionId = null, string processDefinitionKey = null, string processDefinitionKeyIn = null, string processDefinitionKeyNotIn = null, string deploymentId = null, string superProcessInstance = null, string subProcessInstance = null, string superCaseInstance = null, string subCaseInstance = null, bool? active = null, bool? suspended = null, bool? withIncident = null, string incidentId = null, string incidentType = null, string incidentMessage = null, string incidentMessageLike = null, string tenantIdIn = null, bool? withoutTenantId = null, bool? processDefinitionWithoutTenantId = null, string activityIdIn = null, bool? rootProcessInstances = null, bool? leafProcessInstances = null, string variables = null, bool? variableNamesIgnoreCase = null, bool? variableValuesIgnoreCase = null)
 
@@ -833,43 +1167,47 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var sortBy = sortBy_example;  // string | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. (optional) 
+            var sortBy = "instanceId";  // string | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. (optional) 
+            var sortOrder = "asc";  // string | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. (optional) 
             var firstResult = 56;  // int? | Pagination of results. Specifies the index of the first result to return. (optional) 
             var maxResults = 56;  // int? | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. (optional) 
-            var processInstanceIds = processInstanceIds_example;  // string | Filter by a comma-separated list of process instance ids. (optional) 
-            var businessKey = businessKey_example;  // string | Filter by process instance business key. (optional) 
-            var businessKeyLike = businessKeyLike_example;  // string | Filter by process instance business key that the parameter is a substring of. (optional) 
-            var caseInstanceId = caseInstanceId_example;  // string | Filter by case instance id. (optional) 
-            var processDefinitionId = processDefinitionId_example;  // string | Filter by the deployment the id belongs to. (optional) 
-            var processDefinitionKey = processDefinitionKey_example;  // string | Filter by the key of the process definition the instances run on. (optional) 
-            var processDefinitionKeyIn = processDefinitionKeyIn_example;  // string | Filter by a comma-separated list of process definition keys. A process instance must have one of the given process definition keys. (optional) 
-            var processDefinitionKeyNotIn = processDefinitionKeyNotIn_example;  // string | Exclude instances by a comma-separated list of process definition keys. A process instance must not have one of the given process definition keys. (optional) 
-            var deploymentId = deploymentId_example;  // string | Filter by the deployment the id belongs to. (optional) 
-            var superProcessInstance = superProcessInstance_example;  // string | Restrict query to all process instances that are sub process instances of the given process instance. Takes a process instance id. (optional) 
-            var subProcessInstance = subProcessInstance_example;  // string | Restrict query to all process instances that have the given process instance as a sub process instance. Takes a process instance id. (optional) 
-            var superCaseInstance = superCaseInstance_example;  // string | Restrict query to all process instances that are sub process instances of the given case instance. Takes a case instance id. (optional) 
-            var subCaseInstance = subCaseInstance_example;  // string | Restrict query to all process instances that have the given case instance as a sub case instance. Takes a case instance id. (optional) 
-            var active = true;  // bool? | Only include active process instances. Value may only be true, as false is the default behavior. (optional)  (default to false)
-            var suspended = true;  // bool? | Only include suspended process instances. Value may only be true, as false is the default behavior. (optional)  (default to false)
-            var withIncident = true;  // bool? | Filter by presence of incidents. Selects only process instances that have an incident. (optional)  (default to false)
-            var incidentId = incidentId_example;  // string | Filter by the incident id. (optional) 
-            var incidentType = incidentType_example;  // string | Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/incidents/#incident-types) for a list of incident types. (optional) 
-            var incidentMessage = incidentMessage_example;  // string | Filter by the incident message. Exact match. (optional) 
-            var incidentMessageLike = incidentMessageLike_example;  // string | Filter by the incident message that the parameter is a substring of. (optional) 
-            var tenantIdIn = tenantIdIn_example;  // string | Filter by a comma-separated list of tenant ids. A process instance must have one of the given tenant ids. (optional) 
-            var withoutTenantId = true;  // bool? | Only include process instances which belong to no tenant. (optional)  (default to false)
-            var processDefinitionWithoutTenantId = true;  // bool? | Only include process instances which process definition has no tenant id. (optional)  (default to false)
-            var activityIdIn = activityIdIn_example;  // string | Filter by a comma-separated list of activity ids. A process instance must currently wait in a leaf activity with one of the given activity ids. (optional) 
-            var rootProcessInstances = true;  // bool? | Restrict the query to all process instances that are top level process instances. (optional)  (default to false)
-            var leafProcessInstances = true;  // bool? | Restrict the query to all process instances that are leaf instances. (i.e. don't have any sub instances). (optional)  (default to false)
-            var variables = variables_example;  // string | Only include process instances that have variables with certain values. Variable filtering expressions are comma-separated and are structured as follows:  A valid parameter value has the form `key_operator_value`. `key` is the variable name, `operator` is the comparison operator to be used and `value` the variable value.  **Note**: Values are always treated as String objects on server side.  Valid `operator` values are: `eq` - equal to; `neq` - not equal to; `gt` - greater than; `gteq` - greater than or equal to; `lt` - lower than; `lteq` - lower than or equal to; `like`. `key` and `value` may not contain underscore or comma characters. (optional) 
-            var variableNamesIgnoreCase = true;  // bool? | Match all variable names in this query case-insensitively. If set to true variableName and variablename are treated as equal. (optional)  (default to false)
-            var variableValuesIgnoreCase = true;  // bool? | Match all variable values in this query case-insensitively. If set to true variableValue and variablevalue are treated as equal. (optional)  (default to false)
+            var processInstanceIds = "processInstanceIds_example";  // string | Filter by a comma-separated list of process instance ids. (optional) 
+            var businessKey = "businessKey_example";  // string | Filter by process instance business key. (optional) 
+            var businessKeyLike = "businessKeyLike_example";  // string | Filter by process instance business key that the parameter is a substring of. (optional) 
+            var caseInstanceId = "caseInstanceId_example";  // string | Filter by case instance id. (optional) 
+            var processDefinitionId = "processDefinitionId_example";  // string | Filter by the deployment the id belongs to. (optional) 
+            var processDefinitionKey = "processDefinitionKey_example";  // string | Filter by the key of the process definition the instances run on. (optional) 
+            var processDefinitionKeyIn = "processDefinitionKeyIn_example";  // string | Filter by a comma-separated list of process definition keys. A process instance must have one of the given process definition keys. (optional) 
+            var processDefinitionKeyNotIn = "processDefinitionKeyNotIn_example";  // string | Exclude instances by a comma-separated list of process definition keys. A process instance must not have one of the given process definition keys. (optional) 
+            var deploymentId = "deploymentId_example";  // string | Filter by the deployment the id belongs to. (optional) 
+            var superProcessInstance = "superProcessInstance_example";  // string | Restrict query to all process instances that are sub process instances of the given process instance. Takes a process instance id. (optional) 
+            var subProcessInstance = "subProcessInstance_example";  // string | Restrict query to all process instances that have the given process instance as a sub process instance. Takes a process instance id. (optional) 
+            var superCaseInstance = "superCaseInstance_example";  // string | Restrict query to all process instances that are sub process instances of the given case instance. Takes a case instance id. (optional) 
+            var subCaseInstance = "subCaseInstance_example";  // string | Restrict query to all process instances that have the given case instance as a sub case instance. Takes a case instance id. (optional) 
+            var active = false;  // bool? | Only include active process instances. Value may only be true, as false is the default behavior. (optional)  (default to false)
+            var suspended = false;  // bool? | Only include suspended process instances. Value may only be true, as false is the default behavior. (optional)  (default to false)
+            var withIncident = false;  // bool? | Filter by presence of incidents. Selects only process instances that have an incident. (optional)  (default to false)
+            var incidentId = "incidentId_example";  // string | Filter by the incident id. (optional) 
+            var incidentType = "incidentType_example";  // string | Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/incidents/#incident-types) for a list of incident types. (optional) 
+            var incidentMessage = "incidentMessage_example";  // string | Filter by the incident message. Exact match. (optional) 
+            var incidentMessageLike = "incidentMessageLike_example";  // string | Filter by the incident message that the parameter is a substring of. (optional) 
+            var tenantIdIn = "tenantIdIn_example";  // string | Filter by a comma-separated list of tenant ids. A process instance must have one of the given tenant ids. (optional) 
+            var withoutTenantId = false;  // bool? | Only include process instances which belong to no tenant. (optional)  (default to false)
+            var processDefinitionWithoutTenantId = false;  // bool? | Only include process instances which process definition has no tenant id. (optional)  (default to false)
+            var activityIdIn = "activityIdIn_example";  // string | Filter by a comma-separated list of activity ids. A process instance must currently wait in a leaf activity with one of the given activity ids. (optional) 
+            var rootProcessInstances = false;  // bool? | Restrict the query to all process instances that are top level process instances. (optional)  (default to false)
+            var leafProcessInstances = false;  // bool? | Restrict the query to all process instances that are leaf instances. (i.e. don't have any sub instances). (optional)  (default to false)
+            var variables = "variables_example";  // string | Only include process instances that have variables with certain values. Variable filtering expressions are comma-separated and are structured as follows:  A valid parameter value has the form `key_operator_value`. `key` is the variable name, `operator` is the comparison operator to be used and `value` the variable value.  **Note**: Values are always treated as String objects on server side.  Valid `operator` values are: `eq` - equal to; `neq` - not equal to; `gt` - greater than; `gteq` - greater than or equal to; `lt` - lower than; `lteq` - lower than or equal to; `like`. `key` and `value` may not contain underscore or comma characters. (optional) 
+            var variableNamesIgnoreCase = false;  // bool? | Match all variable names in this query case-insensitively. If set to true variableName and variablename are treated as equal. (optional)  (default to false)
+            var variableValuesIgnoreCase = false;  // bool? | Match all variable values in this query case-insensitively. If set to true variableValue and variablevalue are treated as equal. (optional)  (default to false)
 
             try
             {
@@ -879,8 +1217,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstances: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstances: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -888,43 +1226,63 @@ namespace Example
 }
 ```
 
+#### Using the GetProcessInstancesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get List
+    ApiResponse<List<ProcessInstanceDto>> response = apiInstance.GetProcessInstancesWithHttpInfo(sortBy, sortOrder, firstResult, maxResults, processInstanceIds, businessKey, businessKeyLike, caseInstanceId, processDefinitionId, processDefinitionKey, processDefinitionKeyIn, processDefinitionKeyNotIn, deploymentId, superProcessInstance, subProcessInstance, superCaseInstance, subCaseInstance, active, suspended, withIncident, incidentId, incidentType, incidentMessage, incidentMessageLike, tenantIdIn, withoutTenantId, processDefinitionWithoutTenantId, activityIdIn, rootProcessInstances, leafProcessInstances, variables, variableNamesIgnoreCase, variableValuesIgnoreCase);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstancesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **sortBy** | **string**| Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. | [optional] 
- **sortOrder** | **string**| Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. | [optional] 
- **firstResult** | **int?**| Pagination of results. Specifies the index of the first result to return. | [optional] 
- **maxResults** | **int?**| Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional] 
- **processInstanceIds** | **string**| Filter by a comma-separated list of process instance ids. | [optional] 
- **businessKey** | **string**| Filter by process instance business key. | [optional] 
- **businessKeyLike** | **string**| Filter by process instance business key that the parameter is a substring of. | [optional] 
- **caseInstanceId** | **string**| Filter by case instance id. | [optional] 
- **processDefinitionId** | **string**| Filter by the deployment the id belongs to. | [optional] 
- **processDefinitionKey** | **string**| Filter by the key of the process definition the instances run on. | [optional] 
- **processDefinitionKeyIn** | **string**| Filter by a comma-separated list of process definition keys. A process instance must have one of the given process definition keys. | [optional] 
- **processDefinitionKeyNotIn** | **string**| Exclude instances by a comma-separated list of process definition keys. A process instance must not have one of the given process definition keys. | [optional] 
- **deploymentId** | **string**| Filter by the deployment the id belongs to. | [optional] 
- **superProcessInstance** | **string**| Restrict query to all process instances that are sub process instances of the given process instance. Takes a process instance id. | [optional] 
- **subProcessInstance** | **string**| Restrict query to all process instances that have the given process instance as a sub process instance. Takes a process instance id. | [optional] 
- **superCaseInstance** | **string**| Restrict query to all process instances that are sub process instances of the given case instance. Takes a case instance id. | [optional] 
- **subCaseInstance** | **string**| Restrict query to all process instances that have the given case instance as a sub case instance. Takes a case instance id. | [optional] 
- **active** | **bool?**| Only include active process instances. Value may only be true, as false is the default behavior. | [optional] [default to false]
- **suspended** | **bool?**| Only include suspended process instances. Value may only be true, as false is the default behavior. | [optional] [default to false]
- **withIncident** | **bool?**| Filter by presence of incidents. Selects only process instances that have an incident. | [optional] [default to false]
- **incidentId** | **string**| Filter by the incident id. | [optional] 
- **incidentType** | **string**| Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional] 
- **incidentMessage** | **string**| Filter by the incident message. Exact match. | [optional] 
- **incidentMessageLike** | **string**| Filter by the incident message that the parameter is a substring of. | [optional] 
- **tenantIdIn** | **string**| Filter by a comma-separated list of tenant ids. A process instance must have one of the given tenant ids. | [optional] 
- **withoutTenantId** | **bool?**| Only include process instances which belong to no tenant. | [optional] [default to false]
- **processDefinitionWithoutTenantId** | **bool?**| Only include process instances which process definition has no tenant id. | [optional] [default to false]
- **activityIdIn** | **string**| Filter by a comma-separated list of activity ids. A process instance must currently wait in a leaf activity with one of the given activity ids. | [optional] 
- **rootProcessInstances** | **bool?**| Restrict the query to all process instances that are top level process instances. | [optional] [default to false]
- **leafProcessInstances** | **bool?**| Restrict the query to all process instances that are leaf instances. (i.e. don&#39;t have any sub instances). | [optional] [default to false]
- **variables** | **string**| Only include process instances that have variables with certain values. Variable filtering expressions are comma-separated and are structured as follows:  A valid parameter value has the form &#x60;key_operator_value&#x60;. &#x60;key&#x60; is the variable name, &#x60;operator&#x60; is the comparison operator to be used and &#x60;value&#x60; the variable value.  **Note**: Values are always treated as String objects on server side.  Valid &#x60;operator&#x60; values are: &#x60;eq&#x60; - equal to; &#x60;neq&#x60; - not equal to; &#x60;gt&#x60; - greater than; &#x60;gteq&#x60; - greater than or equal to; &#x60;lt&#x60; - lower than; &#x60;lteq&#x60; - lower than or equal to; &#x60;like&#x60;. &#x60;key&#x60; and &#x60;value&#x60; may not contain underscore or comma characters. | [optional] 
- **variableNamesIgnoreCase** | **bool?**| Match all variable names in this query case-insensitively. If set to true variableName and variablename are treated as equal. | [optional] [default to false]
- **variableValuesIgnoreCase** | **bool?**| Match all variable values in this query case-insensitively. If set to true variableValue and variablevalue are treated as equal. | [optional] [default to false]
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **sortBy** | **string** | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. | [optional]  |
+| **sortOrder** | **string** | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. | [optional]  |
+| **firstResult** | **int?** | Pagination of results. Specifies the index of the first result to return. | [optional]  |
+| **maxResults** | **int?** | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional]  |
+| **processInstanceIds** | **string** | Filter by a comma-separated list of process instance ids. | [optional]  |
+| **businessKey** | **string** | Filter by process instance business key. | [optional]  |
+| **businessKeyLike** | **string** | Filter by process instance business key that the parameter is a substring of. | [optional]  |
+| **caseInstanceId** | **string** | Filter by case instance id. | [optional]  |
+| **processDefinitionId** | **string** | Filter by the deployment the id belongs to. | [optional]  |
+| **processDefinitionKey** | **string** | Filter by the key of the process definition the instances run on. | [optional]  |
+| **processDefinitionKeyIn** | **string** | Filter by a comma-separated list of process definition keys. A process instance must have one of the given process definition keys. | [optional]  |
+| **processDefinitionKeyNotIn** | **string** | Exclude instances by a comma-separated list of process definition keys. A process instance must not have one of the given process definition keys. | [optional]  |
+| **deploymentId** | **string** | Filter by the deployment the id belongs to. | [optional]  |
+| **superProcessInstance** | **string** | Restrict query to all process instances that are sub process instances of the given process instance. Takes a process instance id. | [optional]  |
+| **subProcessInstance** | **string** | Restrict query to all process instances that have the given process instance as a sub process instance. Takes a process instance id. | [optional]  |
+| **superCaseInstance** | **string** | Restrict query to all process instances that are sub process instances of the given case instance. Takes a case instance id. | [optional]  |
+| **subCaseInstance** | **string** | Restrict query to all process instances that have the given case instance as a sub case instance. Takes a case instance id. | [optional]  |
+| **active** | **bool?** | Only include active process instances. Value may only be true, as false is the default behavior. | [optional] [default to false] |
+| **suspended** | **bool?** | Only include suspended process instances. Value may only be true, as false is the default behavior. | [optional] [default to false] |
+| **withIncident** | **bool?** | Filter by presence of incidents. Selects only process instances that have an incident. | [optional] [default to false] |
+| **incidentId** | **string** | Filter by the incident id. | [optional]  |
+| **incidentType** | **string** | Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]  |
+| **incidentMessage** | **string** | Filter by the incident message. Exact match. | [optional]  |
+| **incidentMessageLike** | **string** | Filter by the incident message that the parameter is a substring of. | [optional]  |
+| **tenantIdIn** | **string** | Filter by a comma-separated list of tenant ids. A process instance must have one of the given tenant ids. | [optional]  |
+| **withoutTenantId** | **bool?** | Only include process instances which belong to no tenant. | [optional] [default to false] |
+| **processDefinitionWithoutTenantId** | **bool?** | Only include process instances which process definition has no tenant id. | [optional] [default to false] |
+| **activityIdIn** | **string** | Filter by a comma-separated list of activity ids. A process instance must currently wait in a leaf activity with one of the given activity ids. | [optional]  |
+| **rootProcessInstances** | **bool?** | Restrict the query to all process instances that are top level process instances. | [optional] [default to false] |
+| **leafProcessInstances** | **bool?** | Restrict the query to all process instances that are leaf instances. (i.e. don&#39;t have any sub instances). | [optional] [default to false] |
+| **variables** | **string** | Only include process instances that have variables with certain values. Variable filtering expressions are comma-separated and are structured as follows:  A valid parameter value has the form &#x60;key_operator_value&#x60;. &#x60;key&#x60; is the variable name, &#x60;operator&#x60; is the comparison operator to be used and &#x60;value&#x60; the variable value.  **Note**: Values are always treated as String objects on server side.  Valid &#x60;operator&#x60; values are: &#x60;eq&#x60; - equal to; &#x60;neq&#x60; - not equal to; &#x60;gt&#x60; - greater than; &#x60;gteq&#x60; - greater than or equal to; &#x60;lt&#x60; - lower than; &#x60;lteq&#x60; - lower than or equal to; &#x60;like&#x60;. &#x60;key&#x60; and &#x60;value&#x60; may not contain underscore or comma characters. | [optional]  |
+| **variableNamesIgnoreCase** | **bool?** | Match all variable names in this query case-insensitively. If set to true variableName and variablename are treated as equal. | [optional] [default to false] |
+| **variableValuesIgnoreCase** | **bool?** | Match all variable values in this query case-insensitively. If set to true variableValue and variablevalue are treated as equal. | [optional] [default to false] |
 
 ### Return type
 
@@ -932,7 +1290,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -948,7 +1306,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getprocessinstancescount"></a>
+<a id="getprocessinstancescount"></a>
 # **GetProcessInstancesCount**
 > CountResultDto GetProcessInstancesCount (string processInstanceIds = null, string businessKey = null, string businessKeyLike = null, string caseInstanceId = null, string processDefinitionId = null, string processDefinitionKey = null, string processDefinitionKeyIn = null, string processDefinitionKeyNotIn = null, string deploymentId = null, string superProcessInstance = null, string subProcessInstance = null, string superCaseInstance = null, string subCaseInstance = null, bool? active = null, bool? suspended = null, bool? withIncident = null, string incidentId = null, string incidentType = null, string incidentMessage = null, string incidentMessageLike = null, string tenantIdIn = null, bool? withoutTenantId = null, bool? processDefinitionWithoutTenantId = null, string activityIdIn = null, bool? rootProcessInstances = null, bool? leafProcessInstances = null, string variables = null, bool? variableNamesIgnoreCase = null, bool? variableValuesIgnoreCase = null)
 
@@ -973,39 +1331,43 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var processInstanceIds = processInstanceIds_example;  // string | Filter by a comma-separated list of process instance ids. (optional) 
-            var businessKey = businessKey_example;  // string | Filter by process instance business key. (optional) 
-            var businessKeyLike = businessKeyLike_example;  // string | Filter by process instance business key that the parameter is a substring of. (optional) 
-            var caseInstanceId = caseInstanceId_example;  // string | Filter by case instance id. (optional) 
-            var processDefinitionId = processDefinitionId_example;  // string | Filter by the deployment the id belongs to. (optional) 
-            var processDefinitionKey = processDefinitionKey_example;  // string | Filter by the key of the process definition the instances run on. (optional) 
-            var processDefinitionKeyIn = processDefinitionKeyIn_example;  // string | Filter by a comma-separated list of process definition keys. A process instance must have one of the given process definition keys. (optional) 
-            var processDefinitionKeyNotIn = processDefinitionKeyNotIn_example;  // string | Exclude instances by a comma-separated list of process definition keys. A process instance must not have one of the given process definition keys. (optional) 
-            var deploymentId = deploymentId_example;  // string | Filter by the deployment the id belongs to. (optional) 
-            var superProcessInstance = superProcessInstance_example;  // string | Restrict query to all process instances that are sub process instances of the given process instance. Takes a process instance id. (optional) 
-            var subProcessInstance = subProcessInstance_example;  // string | Restrict query to all process instances that have the given process instance as a sub process instance. Takes a process instance id. (optional) 
-            var superCaseInstance = superCaseInstance_example;  // string | Restrict query to all process instances that are sub process instances of the given case instance. Takes a case instance id. (optional) 
-            var subCaseInstance = subCaseInstance_example;  // string | Restrict query to all process instances that have the given case instance as a sub case instance. Takes a case instance id. (optional) 
-            var active = true;  // bool? | Only include active process instances. Value may only be true, as false is the default behavior. (optional)  (default to false)
-            var suspended = true;  // bool? | Only include suspended process instances. Value may only be true, as false is the default behavior. (optional)  (default to false)
-            var withIncident = true;  // bool? | Filter by presence of incidents. Selects only process instances that have an incident. (optional)  (default to false)
-            var incidentId = incidentId_example;  // string | Filter by the incident id. (optional) 
-            var incidentType = incidentType_example;  // string | Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/incidents/#incident-types) for a list of incident types. (optional) 
-            var incidentMessage = incidentMessage_example;  // string | Filter by the incident message. Exact match. (optional) 
-            var incidentMessageLike = incidentMessageLike_example;  // string | Filter by the incident message that the parameter is a substring of. (optional) 
-            var tenantIdIn = tenantIdIn_example;  // string | Filter by a comma-separated list of tenant ids. A process instance must have one of the given tenant ids. (optional) 
-            var withoutTenantId = true;  // bool? | Only include process instances which belong to no tenant. (optional)  (default to false)
-            var processDefinitionWithoutTenantId = true;  // bool? | Only include process instances which process definition has no tenant id. (optional)  (default to false)
-            var activityIdIn = activityIdIn_example;  // string | Filter by a comma-separated list of activity ids. A process instance must currently wait in a leaf activity with one of the given activity ids. (optional) 
-            var rootProcessInstances = true;  // bool? | Restrict the query to all process instances that are top level process instances. (optional)  (default to false)
-            var leafProcessInstances = true;  // bool? | Restrict the query to all process instances that are leaf instances. (i.e. don't have any sub instances). (optional)  (default to false)
-            var variables = variables_example;  // string | Only include process instances that have variables with certain values. Variable filtering expressions are comma-separated and are structured as follows:  A valid parameter value has the form `key_operator_value`. `key` is the variable name, `operator` is the comparison operator to be used and `value` the variable value.  **Note**: Values are always treated as String objects on server side.  Valid `operator` values are: `eq` - equal to; `neq` - not equal to; `gt` - greater than; `gteq` - greater than or equal to; `lt` - lower than; `lteq` - lower than or equal to; `like`. `key` and `value` may not contain underscore or comma characters. (optional) 
-            var variableNamesIgnoreCase = true;  // bool? | Match all variable names in this query case-insensitively. If set to true variableName and variablename are treated as equal. (optional)  (default to false)
-            var variableValuesIgnoreCase = true;  // bool? | Match all variable values in this query case-insensitively. If set to true variableValue and variablevalue are treated as equal. (optional)  (default to false)
+            var processInstanceIds = "processInstanceIds_example";  // string | Filter by a comma-separated list of process instance ids. (optional) 
+            var businessKey = "businessKey_example";  // string | Filter by process instance business key. (optional) 
+            var businessKeyLike = "businessKeyLike_example";  // string | Filter by process instance business key that the parameter is a substring of. (optional) 
+            var caseInstanceId = "caseInstanceId_example";  // string | Filter by case instance id. (optional) 
+            var processDefinitionId = "processDefinitionId_example";  // string | Filter by the deployment the id belongs to. (optional) 
+            var processDefinitionKey = "processDefinitionKey_example";  // string | Filter by the key of the process definition the instances run on. (optional) 
+            var processDefinitionKeyIn = "processDefinitionKeyIn_example";  // string | Filter by a comma-separated list of process definition keys. A process instance must have one of the given process definition keys. (optional) 
+            var processDefinitionKeyNotIn = "processDefinitionKeyNotIn_example";  // string | Exclude instances by a comma-separated list of process definition keys. A process instance must not have one of the given process definition keys. (optional) 
+            var deploymentId = "deploymentId_example";  // string | Filter by the deployment the id belongs to. (optional) 
+            var superProcessInstance = "superProcessInstance_example";  // string | Restrict query to all process instances that are sub process instances of the given process instance. Takes a process instance id. (optional) 
+            var subProcessInstance = "subProcessInstance_example";  // string | Restrict query to all process instances that have the given process instance as a sub process instance. Takes a process instance id. (optional) 
+            var superCaseInstance = "superCaseInstance_example";  // string | Restrict query to all process instances that are sub process instances of the given case instance. Takes a case instance id. (optional) 
+            var subCaseInstance = "subCaseInstance_example";  // string | Restrict query to all process instances that have the given case instance as a sub case instance. Takes a case instance id. (optional) 
+            var active = false;  // bool? | Only include active process instances. Value may only be true, as false is the default behavior. (optional)  (default to false)
+            var suspended = false;  // bool? | Only include suspended process instances. Value may only be true, as false is the default behavior. (optional)  (default to false)
+            var withIncident = false;  // bool? | Filter by presence of incidents. Selects only process instances that have an incident. (optional)  (default to false)
+            var incidentId = "incidentId_example";  // string | Filter by the incident id. (optional) 
+            var incidentType = "incidentType_example";  // string | Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/incidents/#incident-types) for a list of incident types. (optional) 
+            var incidentMessage = "incidentMessage_example";  // string | Filter by the incident message. Exact match. (optional) 
+            var incidentMessageLike = "incidentMessageLike_example";  // string | Filter by the incident message that the parameter is a substring of. (optional) 
+            var tenantIdIn = "tenantIdIn_example";  // string | Filter by a comma-separated list of tenant ids. A process instance must have one of the given tenant ids. (optional) 
+            var withoutTenantId = false;  // bool? | Only include process instances which belong to no tenant. (optional)  (default to false)
+            var processDefinitionWithoutTenantId = false;  // bool? | Only include process instances which process definition has no tenant id. (optional)  (default to false)
+            var activityIdIn = "activityIdIn_example";  // string | Filter by a comma-separated list of activity ids. A process instance must currently wait in a leaf activity with one of the given activity ids. (optional) 
+            var rootProcessInstances = false;  // bool? | Restrict the query to all process instances that are top level process instances. (optional)  (default to false)
+            var leafProcessInstances = false;  // bool? | Restrict the query to all process instances that are leaf instances. (i.e. don't have any sub instances). (optional)  (default to false)
+            var variables = "variables_example";  // string | Only include process instances that have variables with certain values. Variable filtering expressions are comma-separated and are structured as follows:  A valid parameter value has the form `key_operator_value`. `key` is the variable name, `operator` is the comparison operator to be used and `value` the variable value.  **Note**: Values are always treated as String objects on server side.  Valid `operator` values are: `eq` - equal to; `neq` - not equal to; `gt` - greater than; `gteq` - greater than or equal to; `lt` - lower than; `lteq` - lower than or equal to; `like`. `key` and `value` may not contain underscore or comma characters. (optional) 
+            var variableNamesIgnoreCase = false;  // bool? | Match all variable names in this query case-insensitively. If set to true variableName and variablename are treated as equal. (optional)  (default to false)
+            var variableValuesIgnoreCase = false;  // bool? | Match all variable values in this query case-insensitively. If set to true variableValue and variablevalue are treated as equal. (optional)  (default to false)
 
             try
             {
@@ -1015,8 +1377,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstancesCount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstancesCount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1024,39 +1386,59 @@ namespace Example
 }
 ```
 
+#### Using the GetProcessInstancesCountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get List Count
+    ApiResponse<CountResultDto> response = apiInstance.GetProcessInstancesCountWithHttpInfo(processInstanceIds, businessKey, businessKeyLike, caseInstanceId, processDefinitionId, processDefinitionKey, processDefinitionKeyIn, processDefinitionKeyNotIn, deploymentId, superProcessInstance, subProcessInstance, superCaseInstance, subCaseInstance, active, suspended, withIncident, incidentId, incidentType, incidentMessage, incidentMessageLike, tenantIdIn, withoutTenantId, processDefinitionWithoutTenantId, activityIdIn, rootProcessInstances, leafProcessInstances, variables, variableNamesIgnoreCase, variableValuesIgnoreCase);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.GetProcessInstancesCountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processInstanceIds** | **string**| Filter by a comma-separated list of process instance ids. | [optional] 
- **businessKey** | **string**| Filter by process instance business key. | [optional] 
- **businessKeyLike** | **string**| Filter by process instance business key that the parameter is a substring of. | [optional] 
- **caseInstanceId** | **string**| Filter by case instance id. | [optional] 
- **processDefinitionId** | **string**| Filter by the deployment the id belongs to. | [optional] 
- **processDefinitionKey** | **string**| Filter by the key of the process definition the instances run on. | [optional] 
- **processDefinitionKeyIn** | **string**| Filter by a comma-separated list of process definition keys. A process instance must have one of the given process definition keys. | [optional] 
- **processDefinitionKeyNotIn** | **string**| Exclude instances by a comma-separated list of process definition keys. A process instance must not have one of the given process definition keys. | [optional] 
- **deploymentId** | **string**| Filter by the deployment the id belongs to. | [optional] 
- **superProcessInstance** | **string**| Restrict query to all process instances that are sub process instances of the given process instance. Takes a process instance id. | [optional] 
- **subProcessInstance** | **string**| Restrict query to all process instances that have the given process instance as a sub process instance. Takes a process instance id. | [optional] 
- **superCaseInstance** | **string**| Restrict query to all process instances that are sub process instances of the given case instance. Takes a case instance id. | [optional] 
- **subCaseInstance** | **string**| Restrict query to all process instances that have the given case instance as a sub case instance. Takes a case instance id. | [optional] 
- **active** | **bool?**| Only include active process instances. Value may only be true, as false is the default behavior. | [optional] [default to false]
- **suspended** | **bool?**| Only include suspended process instances. Value may only be true, as false is the default behavior. | [optional] [default to false]
- **withIncident** | **bool?**| Filter by presence of incidents. Selects only process instances that have an incident. | [optional] [default to false]
- **incidentId** | **string**| Filter by the incident id. | [optional] 
- **incidentType** | **string**| Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional] 
- **incidentMessage** | **string**| Filter by the incident message. Exact match. | [optional] 
- **incidentMessageLike** | **string**| Filter by the incident message that the parameter is a substring of. | [optional] 
- **tenantIdIn** | **string**| Filter by a comma-separated list of tenant ids. A process instance must have one of the given tenant ids. | [optional] 
- **withoutTenantId** | **bool?**| Only include process instances which belong to no tenant. | [optional] [default to false]
- **processDefinitionWithoutTenantId** | **bool?**| Only include process instances which process definition has no tenant id. | [optional] [default to false]
- **activityIdIn** | **string**| Filter by a comma-separated list of activity ids. A process instance must currently wait in a leaf activity with one of the given activity ids. | [optional] 
- **rootProcessInstances** | **bool?**| Restrict the query to all process instances that are top level process instances. | [optional] [default to false]
- **leafProcessInstances** | **bool?**| Restrict the query to all process instances that are leaf instances. (i.e. don&#39;t have any sub instances). | [optional] [default to false]
- **variables** | **string**| Only include process instances that have variables with certain values. Variable filtering expressions are comma-separated and are structured as follows:  A valid parameter value has the form &#x60;key_operator_value&#x60;. &#x60;key&#x60; is the variable name, &#x60;operator&#x60; is the comparison operator to be used and &#x60;value&#x60; the variable value.  **Note**: Values are always treated as String objects on server side.  Valid &#x60;operator&#x60; values are: &#x60;eq&#x60; - equal to; &#x60;neq&#x60; - not equal to; &#x60;gt&#x60; - greater than; &#x60;gteq&#x60; - greater than or equal to; &#x60;lt&#x60; - lower than; &#x60;lteq&#x60; - lower than or equal to; &#x60;like&#x60;. &#x60;key&#x60; and &#x60;value&#x60; may not contain underscore or comma characters. | [optional] 
- **variableNamesIgnoreCase** | **bool?**| Match all variable names in this query case-insensitively. If set to true variableName and variablename are treated as equal. | [optional] [default to false]
- **variableValuesIgnoreCase** | **bool?**| Match all variable values in this query case-insensitively. If set to true variableValue and variablevalue are treated as equal. | [optional] [default to false]
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **processInstanceIds** | **string** | Filter by a comma-separated list of process instance ids. | [optional]  |
+| **businessKey** | **string** | Filter by process instance business key. | [optional]  |
+| **businessKeyLike** | **string** | Filter by process instance business key that the parameter is a substring of. | [optional]  |
+| **caseInstanceId** | **string** | Filter by case instance id. | [optional]  |
+| **processDefinitionId** | **string** | Filter by the deployment the id belongs to. | [optional]  |
+| **processDefinitionKey** | **string** | Filter by the key of the process definition the instances run on. | [optional]  |
+| **processDefinitionKeyIn** | **string** | Filter by a comma-separated list of process definition keys. A process instance must have one of the given process definition keys. | [optional]  |
+| **processDefinitionKeyNotIn** | **string** | Exclude instances by a comma-separated list of process definition keys. A process instance must not have one of the given process definition keys. | [optional]  |
+| **deploymentId** | **string** | Filter by the deployment the id belongs to. | [optional]  |
+| **superProcessInstance** | **string** | Restrict query to all process instances that are sub process instances of the given process instance. Takes a process instance id. | [optional]  |
+| **subProcessInstance** | **string** | Restrict query to all process instances that have the given process instance as a sub process instance. Takes a process instance id. | [optional]  |
+| **superCaseInstance** | **string** | Restrict query to all process instances that are sub process instances of the given case instance. Takes a case instance id. | [optional]  |
+| **subCaseInstance** | **string** | Restrict query to all process instances that have the given case instance as a sub case instance. Takes a case instance id. | [optional]  |
+| **active** | **bool?** | Only include active process instances. Value may only be true, as false is the default behavior. | [optional] [default to false] |
+| **suspended** | **bool?** | Only include suspended process instances. Value may only be true, as false is the default behavior. | [optional] [default to false] |
+| **withIncident** | **bool?** | Filter by presence of incidents. Selects only process instances that have an incident. | [optional] [default to false] |
+| **incidentId** | **string** | Filter by the incident id. | [optional]  |
+| **incidentType** | **string** | Filter by the incident type. See the [User Guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/incidents/#incident-types) for a list of incident types. | [optional]  |
+| **incidentMessage** | **string** | Filter by the incident message. Exact match. | [optional]  |
+| **incidentMessageLike** | **string** | Filter by the incident message that the parameter is a substring of. | [optional]  |
+| **tenantIdIn** | **string** | Filter by a comma-separated list of tenant ids. A process instance must have one of the given tenant ids. | [optional]  |
+| **withoutTenantId** | **bool?** | Only include process instances which belong to no tenant. | [optional] [default to false] |
+| **processDefinitionWithoutTenantId** | **bool?** | Only include process instances which process definition has no tenant id. | [optional] [default to false] |
+| **activityIdIn** | **string** | Filter by a comma-separated list of activity ids. A process instance must currently wait in a leaf activity with one of the given activity ids. | [optional]  |
+| **rootProcessInstances** | **bool?** | Restrict the query to all process instances that are top level process instances. | [optional] [default to false] |
+| **leafProcessInstances** | **bool?** | Restrict the query to all process instances that are leaf instances. (i.e. don&#39;t have any sub instances). | [optional] [default to false] |
+| **variables** | **string** | Only include process instances that have variables with certain values. Variable filtering expressions are comma-separated and are structured as follows:  A valid parameter value has the form &#x60;key_operator_value&#x60;. &#x60;key&#x60; is the variable name, &#x60;operator&#x60; is the comparison operator to be used and &#x60;value&#x60; the variable value.  **Note**: Values are always treated as String objects on server side.  Valid &#x60;operator&#x60; values are: &#x60;eq&#x60; - equal to; &#x60;neq&#x60; - not equal to; &#x60;gt&#x60; - greater than; &#x60;gteq&#x60; - greater than or equal to; &#x60;lt&#x60; - lower than; &#x60;lteq&#x60; - lower than or equal to; &#x60;like&#x60;. &#x60;key&#x60; and &#x60;value&#x60; may not contain underscore or comma characters. | [optional]  |
+| **variableNamesIgnoreCase** | **bool?** | Match all variable names in this query case-insensitively. If set to true variableName and variablename are treated as equal. | [optional] [default to false] |
+| **variableValuesIgnoreCase** | **bool?** | Match all variable values in this query case-insensitively. If set to true variableValue and variablevalue are treated as equal. | [optional] [default to false] |
 
 ### Return type
 
@@ -1064,7 +1446,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1080,7 +1462,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="modifyprocessinstance"></a>
+<a id="modifyprocessinstance"></a>
 # **ModifyProcessInstance**
 > void ModifyProcessInstance (string id, ProcessInstanceModificationDto processInstanceModificationDto = null)
 
@@ -1105,11 +1487,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to modify.
+            var id = "id_example";  // string | The id of the process instance to modify.
             var processInstanceModificationDto = new ProcessInstanceModificationDto(); // ProcessInstanceModificationDto |  (optional) 
 
             try
@@ -1119,8 +1505,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.ModifyProcessInstance: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.ModifyProcessInstance: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1128,12 +1514,29 @@ namespace Example
 }
 ```
 
+#### Using the ModifyProcessInstanceWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Modify Process Instance Execution State
+    apiInstance.ModifyProcessInstanceWithHttpInfo(id, processInstanceModificationDto);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.ModifyProcessInstanceWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to modify. | 
- **processInstanceModificationDto** | [**ProcessInstanceModificationDto**](ProcessInstanceModificationDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to modify. |  |
+| **processInstanceModificationDto** | [**ProcessInstanceModificationDto**](ProcessInstanceModificationDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -1141,7 +1544,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1158,13 +1561,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="modifyprocessinstanceasyncoperation"></a>
+<a id="modifyprocessinstanceasyncoperation"></a>
 # **ModifyProcessInstanceAsyncOperation**
 > BatchDto ModifyProcessInstanceAsyncOperation (string id, ProcessInstanceModificationDto processInstanceModificationDto = null)
 
 Modify Process Instance Execution State Async
 
-Submits a list of modification instructions to change a process instance's execution state async. A modification instruction is one of the following:  * Starting execution before an activity * Starting execution after an activity on its single outgoing sequence flow * Starting execution on a specific sequence flow * Cancelling an activity instance, transition instance, or all instances (activity or transition) for an activity  Instructions are executed asynchronous and in the order they are provided in this request's body. Variables can be provided with every starting instruction.  The exact semantics of modification can be read about in the [User guide](https://docs.camunda.org/manual/7.17/user-guide/process-engine/process-instance-modification/).
+Submits a list of modification instructions to change a process instance's execution state async. A modification instruction is one of the following:  * Starting execution before an activity * Starting execution after an activity on its single outgoing sequence flow * Starting execution on a specific sequence flow * Cancelling an activity instance, transition instance, or all instances (activity or transition) for an activity  Instructions are executed asynchronous and in the order they are provided in this request's body. Variables can be provided with every starting instruction.  The exact semantics of modification can be read about in the [User guide](https://docs.camunda.org/manual/7.21/user-guide/process-engine/process-instance-modification/).
 
 ### Example
 ```csharp
@@ -1183,11 +1586,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to modify.
+            var id = "id_example";  // string | The id of the process instance to modify.
             var processInstanceModificationDto = new ProcessInstanceModificationDto(); // ProcessInstanceModificationDto |  (optional) 
 
             try
@@ -1198,8 +1605,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.ModifyProcessInstanceAsyncOperation: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.ModifyProcessInstanceAsyncOperation: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1207,12 +1614,32 @@ namespace Example
 }
 ```
 
+#### Using the ModifyProcessInstanceAsyncOperationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Modify Process Instance Execution State Async
+    ApiResponse<BatchDto> response = apiInstance.ModifyProcessInstanceAsyncOperationWithHttpInfo(id, processInstanceModificationDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.ModifyProcessInstanceAsyncOperationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to modify. | 
- **processInstanceModificationDto** | [**ProcessInstanceModificationDto**](ProcessInstanceModificationDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to modify. |  |
+| **processInstanceModificationDto** | [**ProcessInstanceModificationDto**](ProcessInstanceModificationDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -1220,7 +1647,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1238,7 +1665,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="modifyprocessinstancevariables"></a>
+<a id="modifyprocessinstancevariables"></a>
 # **ModifyProcessInstanceVariables**
 > void ModifyProcessInstanceVariables (string id, PatchVariablesDto patchVariablesDto = null)
 
@@ -1263,11 +1690,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to set variables for.
+            var id = "id_example";  // string | The id of the process instance to set variables for.
             var patchVariablesDto = new PatchVariablesDto(); // PatchVariablesDto |  (optional) 
 
             try
@@ -1277,8 +1708,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.ModifyProcessInstanceVariables: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.ModifyProcessInstanceVariables: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1286,12 +1717,29 @@ namespace Example
 }
 ```
 
+#### Using the ModifyProcessInstanceVariablesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update/Delete Process Variables
+    apiInstance.ModifyProcessInstanceVariablesWithHttpInfo(id, patchVariablesDto);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.ModifyProcessInstanceVariablesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to set variables for. | 
- **patchVariablesDto** | [**PatchVariablesDto**](PatchVariablesDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to set variables for. |  |
+| **patchVariablesDto** | [**PatchVariablesDto**](PatchVariablesDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -1299,7 +1747,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1316,7 +1764,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="queryprocessinstances"></a>
+<a id="queryprocessinstances"></a>
 # **QueryProcessInstances**
 > List&lt;ProcessInstanceDto&gt; QueryProcessInstances (int? firstResult = null, int? maxResults = null, ProcessInstanceQueryDto processInstanceQueryDto = null)
 
@@ -1341,6 +1789,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -1357,8 +1809,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.QueryProcessInstances: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.QueryProcessInstances: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1366,13 +1818,33 @@ namespace Example
 }
 ```
 
+#### Using the QueryProcessInstancesWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get List (POST)
+    ApiResponse<List<ProcessInstanceDto>> response = apiInstance.QueryProcessInstancesWithHttpInfo(firstResult, maxResults, processInstanceQueryDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.QueryProcessInstancesWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **firstResult** | **int?**| Pagination of results. Specifies the index of the first result to return. | [optional] 
- **maxResults** | **int?**| Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional] 
- **processInstanceQueryDto** | [**ProcessInstanceQueryDto**](ProcessInstanceQueryDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **firstResult** | **int?** | Pagination of results. Specifies the index of the first result to return. | [optional]  |
+| **maxResults** | **int?** | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional]  |
+| **processInstanceQueryDto** | [**ProcessInstanceQueryDto**](ProcessInstanceQueryDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -1380,7 +1852,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1396,7 +1868,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="queryprocessinstancescount"></a>
+<a id="queryprocessinstancescount"></a>
 # **QueryProcessInstancesCount**
 > CountResultDto QueryProcessInstancesCount (ProcessInstanceQueryDto processInstanceQueryDto = null)
 
@@ -1421,6 +1893,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -1435,8 +1911,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.QueryProcessInstancesCount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.QueryProcessInstancesCount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1444,11 +1920,31 @@ namespace Example
 }
 ```
 
+#### Using the QueryProcessInstancesCountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get List Count (POST)
+    ApiResponse<CountResultDto> response = apiInstance.QueryProcessInstancesCountWithHttpInfo(processInstanceQueryDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.QueryProcessInstancesCountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processInstanceQueryDto** | [**ProcessInstanceQueryDto**](ProcessInstanceQueryDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **processInstanceQueryDto** | [**ProcessInstanceQueryDto**](ProcessInstanceQueryDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -1456,7 +1952,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1472,7 +1968,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="setprocessinstancevariable"></a>
+<a id="setprocessinstancevariable"></a>
 # **SetProcessInstanceVariable**
 > void SetProcessInstanceVariable (string id, string varName, VariableValueDto variableValueDto = null)
 
@@ -1497,12 +1993,16 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to set the variable for.
-            var varName = varName_example;  // string | The name of the variable to set.
+            var id = "id_example";  // string | The id of the process instance to set the variable for.
+            var varName = "varName_example";  // string | The name of the variable to set.
             var variableValueDto = new VariableValueDto(); // VariableValueDto |  (optional) 
 
             try
@@ -1512,8 +2012,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.SetProcessInstanceVariable: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.SetProcessInstanceVariable: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1521,13 +2021,30 @@ namespace Example
 }
 ```
 
+#### Using the SetProcessInstanceVariableWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update Process Variable
+    apiInstance.SetProcessInstanceVariableWithHttpInfo(id, varName, variableValueDto);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.SetProcessInstanceVariableWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to set the variable for. | 
- **varName** | **string**| The name of the variable to set. | 
- **variableValueDto** | [**VariableValueDto**](VariableValueDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to set the variable for. |  |
+| **varName** | **string** | The name of the variable to set. |  |
+| **variableValueDto** | [**VariableValueDto**](VariableValueDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -1535,7 +2052,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1551,7 +2068,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="setprocessinstancevariablebinary"></a>
+<a id="setprocessinstancevariablebinary"></a>
 # **SetProcessInstanceVariableBinary**
 > void SetProcessInstanceVariableBinary (string id, string varName, FileParameter data = null, string valueType = null)
 
@@ -1576,14 +2093,18 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to retrieve the variable for.
-            var varName = varName_example;  // string | The name of the variable to retrieve.
-            var data = BINARY_DATA_HERE;  // FileParameter | The binary data to be set. For File variables, this multipart can contain the filename, binary value and MIME type of the file variable to be set Only the filename is mandatory. (optional) 
-            var valueType = valueType_example;  // string | The name of the variable type. Either Bytes for a byte array variable or File for a file variable. (optional) 
+            var id = "id_example";  // string | The id of the process instance to retrieve the variable for.
+            var varName = "varName_example";  // string | The name of the variable to retrieve.
+            var data = new System.IO.MemoryStream(System.IO.File.ReadAllBytes("/path/to/file.txt"));  // FileParameter | The binary data to be set. For File variables, this multipart can contain the filename, binary value and MIME type of the file variable to be set Only the filename is mandatory. (optional) 
+            var valueType = "Bytes";  // string | The name of the variable type. Either Bytes for a byte array variable or File for a file variable. (optional) 
 
             try
             {
@@ -1592,8 +2113,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.SetProcessInstanceVariableBinary: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.SetProcessInstanceVariableBinary: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1601,14 +2122,31 @@ namespace Example
 }
 ```
 
+#### Using the SetProcessInstanceVariableBinaryWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update Process Variable (Binary)
+    apiInstance.SetProcessInstanceVariableBinaryWithHttpInfo(id, varName, data, valueType);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.SetProcessInstanceVariableBinaryWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to retrieve the variable for. | 
- **varName** | **string**| The name of the variable to retrieve. | 
- **data** | **FileParameter****FileParameter**| The binary data to be set. For File variables, this multipart can contain the filename, binary value and MIME type of the file variable to be set Only the filename is mandatory. | [optional] 
- **valueType** | **string**| The name of the variable type. Either Bytes for a byte array variable or File for a file variable. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to retrieve the variable for. |  |
+| **varName** | **string** | The name of the variable to retrieve. |  |
+| **data** | **FileParameter****FileParameter** | The binary data to be set. For File variables, this multipart can contain the filename, binary value and MIME type of the file variable to be set Only the filename is mandatory. | [optional]  |
+| **valueType** | **string** | The name of the variable type. Either Bytes for a byte array variable or File for a file variable. | [optional]  |
 
 ### Return type
 
@@ -1616,7 +2154,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1632,7 +2170,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="setretriesbyprocess"></a>
+<a id="setretriesbyprocess"></a>
 # **SetRetriesByProcess**
 > BatchDto SetRetriesByProcess (SetJobRetriesByProcessDto setJobRetriesByProcessDto = null)
 
@@ -1657,6 +2195,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -1671,8 +2213,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.SetRetriesByProcess: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.SetRetriesByProcess: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1680,11 +2222,31 @@ namespace Example
 }
 ```
 
+#### Using the SetRetriesByProcessWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Set Job Retries Async (POST)
+    ApiResponse<BatchDto> response = apiInstance.SetRetriesByProcessWithHttpInfo(setJobRetriesByProcessDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.SetRetriesByProcessWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **setJobRetriesByProcessDto** | [**SetJobRetriesByProcessDto**](SetJobRetriesByProcessDto.md)| Please note that if both processInstances and processInstanceQuery are provided, then the resulting execution will be performed on the union of these sets. **Unallowed property**: &#x60;historicProcessInstanceQuery&#x60; | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **setJobRetriesByProcessDto** | [**SetJobRetriesByProcessDto**](SetJobRetriesByProcessDto.md) | Please note that if both processInstances and processInstanceQuery are provided, then the resulting execution will be performed on the union of these sets. **Unallowed property**: &#x60;historicProcessInstanceQuery&#x60; | [optional]  |
 
 ### Return type
 
@@ -1692,7 +2254,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1708,7 +2270,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="setretriesbyprocesshistoricquerybased"></a>
+<a id="setretriesbyprocesshistoricquerybased"></a>
 # **SetRetriesByProcessHistoricQueryBased**
 > BatchDto SetRetriesByProcessHistoricQueryBased (SetJobRetriesByProcessDto setJobRetriesByProcessDto = null)
 
@@ -1733,6 +2295,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -1747,8 +2313,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.SetRetriesByProcessHistoricQueryBased: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.SetRetriesByProcessHistoricQueryBased: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1756,11 +2322,31 @@ namespace Example
 }
 ```
 
+#### Using the SetRetriesByProcessHistoricQueryBasedWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Set Job Retries Async Historic Query Based (POST)
+    ApiResponse<BatchDto> response = apiInstance.SetRetriesByProcessHistoricQueryBasedWithHttpInfo(setJobRetriesByProcessDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.SetRetriesByProcessHistoricQueryBasedWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **setJobRetriesByProcessDto** | [**SetJobRetriesByProcessDto**](SetJobRetriesByProcessDto.md)| Please note that if both processInstances and historicProcessInstanceQuery are provided, then the resulting execution will be performed on the union of these sets. **Unallowed property**: &#x60;processInstanceQuery&#x60; | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **setJobRetriesByProcessDto** | [**SetJobRetriesByProcessDto**](SetJobRetriesByProcessDto.md) | Please note that if both processInstances and historicProcessInstanceQuery are provided, then the resulting execution will be performed on the union of these sets. **Unallowed property**: &#x60;processInstanceQuery&#x60; | [optional]  |
 
 ### Return type
 
@@ -1768,7 +2354,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1784,7 +2370,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="setvariablesasyncoperation"></a>
+<a id="setvariablesasyncoperation"></a>
 # **SetVariablesAsyncOperation**
 > BatchDto SetVariablesAsyncOperation (SetVariablesAsyncDto setVariablesAsyncDto = null)
 
@@ -1809,6 +2395,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -1823,8 +2413,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.SetVariablesAsyncOperation: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.SetVariablesAsyncOperation: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1832,11 +2422,31 @@ namespace Example
 }
 ```
 
+#### Using the SetVariablesAsyncOperationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Set Variables Async (POST)
+    ApiResponse<BatchDto> response = apiInstance.SetVariablesAsyncOperationWithHttpInfo(setVariablesAsyncDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.SetVariablesAsyncOperationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **setVariablesAsyncDto** | [**SetVariablesAsyncDto**](SetVariablesAsyncDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **setVariablesAsyncDto** | [**SetVariablesAsyncDto**](SetVariablesAsyncDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -1844,7 +2454,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1857,11 +2467,11 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
 | **400** | Bad Request * The variable value or type is invalid, for example if the value could not be parsed to an Integer value or the passed variable type is not supported * If none of &#x60;processInstanceIds&#x60;, &#x60;processInstanceQuery&#x60; and &#x60;historicProcessInstanceQuery&#x60; is given * If no or an empty array of &#x60;variables&#x60; is given * If no process instance ids where found * If a transient variable is set * If the engine config flag &#x60;javaSerializationFormatEnabled&#x60; is &#x60;false&#x60; and a Java serialized variable is given |  -  |
-| **403** | Returned if the user is not allowed to create the batch.  See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **403** | Returned if the user is not allowed to create the batch.  See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesuspensionstate"></a>
+<a id="updatesuspensionstate"></a>
 # **UpdateSuspensionState**
 > void UpdateSuspensionState (ProcessInstanceSuspensionStateDto processInstanceSuspensionStateDto = null)
 
@@ -1886,6 +2496,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -1899,8 +2513,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.UpdateSuspensionState: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.UpdateSuspensionState: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1908,11 +2522,28 @@ namespace Example
 }
 ```
 
+#### Using the UpdateSuspensionStateWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Activate/Suspend In Group
+    apiInstance.UpdateSuspensionStateWithHttpInfo(processInstanceSuspensionStateDto);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.UpdateSuspensionStateWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processInstanceSuspensionStateDto** | [**ProcessInstanceSuspensionStateDto**](ProcessInstanceSuspensionStateDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **processInstanceSuspensionStateDto** | [**ProcessInstanceSuspensionStateDto**](ProcessInstanceSuspensionStateDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -1920,7 +2551,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1936,7 +2567,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesuspensionstateasyncoperation"></a>
+<a id="updatesuspensionstateasyncoperation"></a>
 # **UpdateSuspensionStateAsyncOperation**
 > BatchDto UpdateSuspensionStateAsyncOperation (ProcessInstanceSuspensionStateAsyncDto processInstanceSuspensionStateAsyncDto = null)
 
@@ -1961,6 +2592,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -1975,8 +2610,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.UpdateSuspensionStateAsyncOperation: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.UpdateSuspensionStateAsyncOperation: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1984,11 +2619,31 @@ namespace Example
 }
 ```
 
+#### Using the UpdateSuspensionStateAsyncOperationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Activate/Suspend In Batch
+    ApiResponse<BatchDto> response = apiInstance.UpdateSuspensionStateAsyncOperationWithHttpInfo(processInstanceSuspensionStateAsyncDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.UpdateSuspensionStateAsyncOperationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **processInstanceSuspensionStateAsyncDto** | [**ProcessInstanceSuspensionStateAsyncDto**](ProcessInstanceSuspensionStateAsyncDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **processInstanceSuspensionStateAsyncDto** | [**ProcessInstanceSuspensionStateAsyncDto**](ProcessInstanceSuspensionStateAsyncDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -1996,7 +2651,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -2012,7 +2667,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatesuspensionstatebyid"></a>
+<a id="updatesuspensionstatebyid"></a>
 # **UpdateSuspensionStateById**
 > void UpdateSuspensionStateById (string id, SuspensionStateDto suspensionStateDto = null)
 
@@ -2037,11 +2692,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new ProcessInstanceApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the process instance to activate or suspend.
+            var id = "id_example";  // string | The id of the process instance to activate or suspend.
             var suspensionStateDto = new SuspensionStateDto(); // SuspensionStateDto |  (optional) 
 
             try
@@ -2051,8 +2710,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling ProcessInstanceApi.UpdateSuspensionStateById: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling ProcessInstanceApi.UpdateSuspensionStateById: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -2060,12 +2719,29 @@ namespace Example
 }
 ```
 
+#### Using the UpdateSuspensionStateByIdWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Activate/Suspend Process Instance By Id
+    apiInstance.UpdateSuspensionStateByIdWithHttpInfo(id, suspensionStateDto);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling ProcessInstanceApi.UpdateSuspensionStateByIdWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the process instance to activate or suspend. | 
- **suspensionStateDto** | [**SuspensionStateDto**](SuspensionStateDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the process instance to activate or suspend. |  |
+| **suspensionStateDto** | [**SuspensionStateDto**](SuspensionStateDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -2073,7 +2749,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 

@@ -2,25 +2,24 @@
 
 All URIs are relative to *http://localhost:8080/engine-rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**CreateFilter**](FilterApi.md#createfilter) | **POST** /filter/create | Create Filter
-[**DeleteFilter**](FilterApi.md#deletefilter) | **DELETE** /filter/{id} | Delete Filter
-[**ExecuteFilterCount**](FilterApi.md#executefiltercount) | **GET** /filter/{id}/count | Execute Filter Count
-[**ExecuteFilterList**](FilterApi.md#executefilterlist) | **GET** /filter/{id}/list | Execute Filter List
-[**ExecuteFilterSingleResult**](FilterApi.md#executefiltersingleresult) | **GET** /filter/{id}/singleResult | Execute Filter Single Result
-[**FilterResourceOptions**](FilterApi.md#filterresourceoptions) | **OPTIONS** /filter | Filter Resource Options
-[**FilterResourceOptionsSingle**](FilterApi.md#filterresourceoptionssingle) | **OPTIONS** /filter/{id} | Filter Resource Options
-[**GetFilterCount**](FilterApi.md#getfiltercount) | **GET** /filter/count | Get Filter Count
-[**GetFilterList**](FilterApi.md#getfilterlist) | **GET** /filter | Get Filters
-[**GetSingleFilter**](FilterApi.md#getsinglefilter) | **GET** /filter/{id} | Get Single Filter
-[**PostExecuteFilterCount**](FilterApi.md#postexecutefiltercount) | **POST** /filter/{id}/count | Execute Filter Count (POST)
-[**PostExecuteFilterList**](FilterApi.md#postexecutefilterlist) | **POST** /filter/{id}/list | Execute Filter List (POST)
-[**PostExecuteFilterSingleResult**](FilterApi.md#postexecutefiltersingleresult) | **POST** /filter/{id}/singleResult | Execute Filter Single Result (POST)
-[**UpdateFilter**](FilterApi.md#updatefilter) | **PUT** /filter/{id} | Update Filter
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**CreateFilter**](FilterApi.md#createfilter) | **POST** /filter/create | Create Filter |
+| [**DeleteFilter**](FilterApi.md#deletefilter) | **DELETE** /filter/{id} | Delete Filter |
+| [**ExecuteFilterCount**](FilterApi.md#executefiltercount) | **GET** /filter/{id}/count | Execute Filter Count |
+| [**ExecuteFilterList**](FilterApi.md#executefilterlist) | **GET** /filter/{id}/list | Execute Filter List |
+| [**ExecuteFilterSingleResult**](FilterApi.md#executefiltersingleresult) | **GET** /filter/{id}/singleResult | Execute Filter Single Result |
+| [**FilterResourceOptions**](FilterApi.md#filterresourceoptions) | **OPTIONS** /filter | Filter Resource Options |
+| [**FilterResourceOptionsSingle**](FilterApi.md#filterresourceoptionssingle) | **OPTIONS** /filter/{id} | Filter Resource Options |
+| [**GetFilterCount**](FilterApi.md#getfiltercount) | **GET** /filter/count | Get Filter Count |
+| [**GetFilterList**](FilterApi.md#getfilterlist) | **GET** /filter | Get Filters |
+| [**GetSingleFilter**](FilterApi.md#getsinglefilter) | **GET** /filter/{id} | Get Single Filter |
+| [**PostExecuteFilterCount**](FilterApi.md#postexecutefiltercount) | **POST** /filter/{id}/count | Execute Filter Count (POST) |
+| [**PostExecuteFilterList**](FilterApi.md#postexecutefilterlist) | **POST** /filter/{id}/list | Execute Filter List (POST) |
+| [**PostExecuteFilterSingleResult**](FilterApi.md#postexecutefiltersingleresult) | **POST** /filter/{id}/singleResult | Execute Filter Single Result (POST) |
+| [**UpdateFilter**](FilterApi.md#updatefilter) | **PUT** /filter/{id} | Update Filter |
 
-
-<a name="createfilter"></a>
+<a id="createfilter"></a>
 # **CreateFilter**
 > FilterDto CreateFilter (CreateFilterDto createFilterDto = null)
 
@@ -45,6 +44,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -59,8 +62,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.CreateFilter: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.CreateFilter: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -68,11 +71,31 @@ namespace Example
 }
 ```
 
+#### Using the CreateFilterWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Create Filter
+    ApiResponse<FilterDto> response = apiInstance.CreateFilterWithHttpInfo(createFilterDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.CreateFilterWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **createFilterDto** | [**CreateFilterDto**](CreateFilterDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **createFilterDto** | [**CreateFilterDto**](CreateFilterDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -80,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -92,12 +115,12 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **400** |  Filter was invalid. See [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **403** |  The authenticated user is unauthorized to create a new filter. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **400** |  Filter was invalid. See [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **403** |  The authenticated user is unauthorized to create a new filter. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="deletefilter"></a>
+<a id="deletefilter"></a>
 # **DeleteFilter**
 > void DeleteFilter (string id)
 
@@ -122,11 +145,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the filter to be deleted.
+            var id = "id_example";  // string | The id of the filter to be deleted.
 
             try
             {
@@ -135,8 +162,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.DeleteFilter: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.DeleteFilter: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -144,11 +171,28 @@ namespace Example
 }
 ```
 
+#### Using the DeleteFilterWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete Filter
+    apiInstance.DeleteFilterWithHttpInfo(id);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.DeleteFilterWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the filter to be deleted. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the filter to be deleted. |  |
 
 ### Return type
 
@@ -156,7 +200,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -168,12 +212,12 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **204** | Request successful. This method returns no content. |  -  |
-| **403** |  The authenticated user is unauthorized to delete this filter. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **404** |  Filter cannot be found. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **403** |  The authenticated user is unauthorized to delete this filter. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **404** |  Filter cannot be found. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="executefiltercount"></a>
+<a id="executefiltercount"></a>
 # **ExecuteFilterCount**
 > CountResultDto ExecuteFilterCount (string id)
 
@@ -198,11 +242,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the filter to execute.
+            var id = "id_example";  // string | The id of the filter to execute.
 
             try
             {
@@ -212,8 +260,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.ExecuteFilterCount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.ExecuteFilterCount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -221,11 +269,31 @@ namespace Example
 }
 ```
 
+#### Using the ExecuteFilterCountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Execute Filter Count
+    ApiResponse<CountResultDto> response = apiInstance.ExecuteFilterCountWithHttpInfo(id);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.ExecuteFilterCountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the filter to execute. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the filter to execute. |  |
 
 ### Return type
 
@@ -233,7 +301,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -245,12 +313,12 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="executefilterlist"></a>
+<a id="executefilterlist"></a>
 # **ExecuteFilterList**
 > List&lt;Object&gt; ExecuteFilterList (string id, int? firstResult = null, int? maxResults = null)
 
@@ -275,11 +343,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the filter to execute.
+            var id = "id_example";  // string | The id of the filter to execute.
             var firstResult = 56;  // int? | Pagination of results. Specifies the index of the first result to return. (optional) 
             var maxResults = 56;  // int? | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. (optional) 
 
@@ -291,8 +363,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.ExecuteFilterList: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.ExecuteFilterList: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -300,13 +372,33 @@ namespace Example
 }
 ```
 
+#### Using the ExecuteFilterListWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Execute Filter List
+    ApiResponse<List<Object>> response = apiInstance.ExecuteFilterListWithHttpInfo(id, firstResult, maxResults);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.ExecuteFilterListWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the filter to execute. | 
- **firstResult** | **int?**| Pagination of results. Specifies the index of the first result to return. | [optional] 
- **maxResults** | **int?**| Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the filter to execute. |  |
+| **firstResult** | **int?** | Pagination of results. Specifies the index of the first result to return. | [optional]  |
+| **maxResults** | **int?** | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional]  |
 
 ### Return type
 
@@ -314,7 +406,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -326,12 +418,12 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. A JSON array containing JSON objects corresponding to the matching entity interface in the engine. This depends on the saved query in the filter. Therefore it is not possible to specify a generic result format, i.e., if the resource type of the filter is Task the result will correspond to the Task interface in the engine. |  -  |
-| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="executefiltersingleresult"></a>
+<a id="executefiltersingleresult"></a>
 # **ExecuteFilterSingleResult**
 > Object ExecuteFilterSingleResult (string id)
 
@@ -356,11 +448,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the filter to execute.
+            var id = "id_example";  // string | The id of the filter to execute.
 
             try
             {
@@ -370,8 +466,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.ExecuteFilterSingleResult: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.ExecuteFilterSingleResult: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -379,11 +475,31 @@ namespace Example
 }
 ```
 
+#### Using the ExecuteFilterSingleResultWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Execute Filter Single Result
+    ApiResponse<Object> response = apiInstance.ExecuteFilterSingleResultWithHttpInfo(id);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.ExecuteFilterSingleResultWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the filter to execute. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the filter to execute. |  |
 
 ### Return type
 
@@ -391,7 +507,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -404,13 +520,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Request successful. A JSON object corresponding to the matching entity interface in the engine. This depends on the saved query in the filter. Therefore it is not possible to specify a generic result format, i.e., if the resource type of the filter is Task the result will correspond to the Task interface in the engine. |  -  |
 | **204** | Request successful, but the result was empty. This method returns no content. |  -  |
-| **400** |  The executed filter returned more than one single result. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **400** |  The executed filter returned more than one single result. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="filterresourceoptions"></a>
+<a id="filterresourceoptions"></a>
 # **FilterResourceOptions**
 > ResourceOptionsDto FilterResourceOptions ()
 
@@ -435,6 +551,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -448,8 +568,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.FilterResourceOptions: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.FilterResourceOptions: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -457,16 +577,35 @@ namespace Example
 }
 ```
 
+#### Using the FilterResourceOptionsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Filter Resource Options
+    ApiResponse<ResourceOptionsDto> response = apiInstance.FilterResourceOptionsWithHttpInfo();
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.FilterResourceOptionsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 This endpoint does not need any parameter.
-
 ### Return type
 
 [**ResourceOptionsDto**](ResourceOptionsDto.md)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -481,7 +620,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="filterresourceoptionssingle"></a>
+<a id="filterresourceoptionssingle"></a>
 # **FilterResourceOptionsSingle**
 > ResourceOptionsDto FilterResourceOptionsSingle (string id)
 
@@ -506,11 +645,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the filter to be checked.
+            var id = "id_example";  // string | The id of the filter to be checked.
 
             try
             {
@@ -520,8 +663,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.FilterResourceOptionsSingle: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.FilterResourceOptionsSingle: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -529,11 +672,31 @@ namespace Example
 }
 ```
 
+#### Using the FilterResourceOptionsSingleWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Filter Resource Options
+    ApiResponse<ResourceOptionsDto> response = apiInstance.FilterResourceOptionsSingleWithHttpInfo(id);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.FilterResourceOptionsSingleWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the filter to be checked. | 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the filter to be checked. |  |
 
 ### Return type
 
@@ -541,7 +704,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -556,13 +719,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getfiltercount"></a>
+<a id="getfiltercount"></a>
 # **GetFilterCount**
 > CountResultDto GetFilterCount (string filterId = null, string resourceType = null, string name = null, string nameLike = null, string owner = null)
 
 Get Filter Count
 
-Retrieves the number of filters that fulfill a provided query. Corresponds to the size of the result set when using the  [Get Filters](https://docs.camunda.org/manual/7.17/reference/rest/filter/get-query/) method.
+Retrieves the number of filters that fulfill a provided query. Corresponds to the size of the result set when using the  [Get Filters](https://docs.camunda.org/manual/7.21/reference/rest/filter/get-query/) method.
 
 ### Example
 ```csharp
@@ -581,15 +744,19 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var filterId = filterId_example;  // string | Filter by the id of the filter. (optional) 
-            var resourceType = resourceType_example;  // string | Filter by the resource type of the filter, e.g., `Task`. (optional) 
-            var name = name_example;  // string | Filter by the name of the filter. (optional) 
-            var nameLike = nameLike_example;  // string | Filter by the name that the parameter is a substring of. (optional) 
-            var owner = owner_example;  // string | Filter by the user id of the owner of the filter. (optional) 
+            var filterId = "filterId_example";  // string | Filter by the id of the filter. (optional) 
+            var resourceType = "resourceType_example";  // string | Filter by the resource type of the filter, e.g., `Task`. (optional) 
+            var name = "name_example";  // string | Filter by the name of the filter. (optional) 
+            var nameLike = "nameLike_example";  // string | Filter by the name that the parameter is a substring of. (optional) 
+            var owner = "owner_example";  // string | Filter by the user id of the owner of the filter. (optional) 
 
             try
             {
@@ -599,8 +766,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.GetFilterCount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.GetFilterCount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -608,15 +775,35 @@ namespace Example
 }
 ```
 
+#### Using the GetFilterCountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Filter Count
+    ApiResponse<CountResultDto> response = apiInstance.GetFilterCountWithHttpInfo(filterId, resourceType, name, nameLike, owner);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.GetFilterCountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterId** | **string**| Filter by the id of the filter. | [optional] 
- **resourceType** | **string**| Filter by the resource type of the filter, e.g., &#x60;Task&#x60;. | [optional] 
- **name** | **string**| Filter by the name of the filter. | [optional] 
- **nameLike** | **string**| Filter by the name that the parameter is a substring of. | [optional] 
- **owner** | **string**| Filter by the user id of the owner of the filter. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **filterId** | **string** | Filter by the id of the filter. | [optional]  |
+| **resourceType** | **string** | Filter by the resource type of the filter, e.g., &#x60;Task&#x60;. | [optional]  |
+| **name** | **string** | Filter by the name of the filter. | [optional]  |
+| **nameLike** | **string** | Filter by the name that the parameter is a substring of. | [optional]  |
+| **owner** | **string** | Filter by the user id of the owner of the filter. | [optional]  |
 
 ### Return type
 
@@ -624,7 +811,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -636,17 +823,17 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **400** |  Returned if some of the query parameters are invalid, for example if a &#x60;sortOrder&#x60;parameter is supplied, but no &#x60;sortBy&#x60;, or if an invalid operator for variable comparison is used. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **400** |  Returned if some of the query parameters are invalid, for example if a &#x60;sortOrder&#x60;parameter is supplied, but no &#x60;sortBy&#x60;, or if an invalid operator for variable comparison is used. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getfilterlist"></a>
+<a id="getfilterlist"></a>
 # **GetFilterList**
 > List&lt;FilterDto&gt; GetFilterList (string filterId = null, string resourceType = null, string name = null, string nameLike = null, string owner = null, bool? itemCount = null, string sortBy = null, string sortOrder = null, int? firstResult = null, int? maxResults = null)
 
 Get Filters
 
-Queries for a list of filters using a list of parameters. The size of the result set can be retrieved by using the [Get Filter Count](https://docs.camunda.org/manual/7.17/reference/rest/filter/get-query-count/) method.
+Queries for a list of filters using a list of parameters. The size of the result set can be retrieved by using the [Get Filter Count](https://docs.camunda.org/manual/7.21/reference/rest/filter/get-query-count/) method.
 
 ### Example
 ```csharp
@@ -665,18 +852,22 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var filterId = filterId_example;  // string | Filter by the id of the filter. (optional) 
-            var resourceType = resourceType_example;  // string | Filter by the resource type of the filter, e.g., `Task`. (optional) 
-            var name = name_example;  // string | Filter by the name of the filter. (optional) 
-            var nameLike = nameLike_example;  // string | Filter by the name that the parameter is a substring of. (optional) 
-            var owner = owner_example;  // string | Filter by the user id of the owner of the filter. (optional) 
+            var filterId = "filterId_example";  // string | Filter by the id of the filter. (optional) 
+            var resourceType = "resourceType_example";  // string | Filter by the resource type of the filter, e.g., `Task`. (optional) 
+            var name = "name_example";  // string | Filter by the name of the filter. (optional) 
+            var nameLike = "nameLike_example";  // string | Filter by the name that the parameter is a substring of. (optional) 
+            var owner = "owner_example";  // string | Filter by the user id of the owner of the filter. (optional) 
             var itemCount = true;  // bool? | If set to `true`, each filter result will contain an `itemCount` property with the number of items matched by the filter itself. (optional) 
-            var sortBy = sortBy_example;  // string | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. (optional) 
+            var sortBy = "filterId";  // string | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. (optional) 
+            var sortOrder = "asc";  // string | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. (optional) 
             var firstResult = 56;  // int? | Pagination of results. Specifies the index of the first result to return. (optional) 
             var maxResults = 56;  // int? | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. (optional) 
 
@@ -688,8 +879,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.GetFilterList: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.GetFilterList: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -697,20 +888,40 @@ namespace Example
 }
 ```
 
+#### Using the GetFilterListWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Filters
+    ApiResponse<List<FilterDto>> response = apiInstance.GetFilterListWithHttpInfo(filterId, resourceType, name, nameLike, owner, itemCount, sortBy, sortOrder, firstResult, maxResults);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.GetFilterListWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **filterId** | **string**| Filter by the id of the filter. | [optional] 
- **resourceType** | **string**| Filter by the resource type of the filter, e.g., &#x60;Task&#x60;. | [optional] 
- **name** | **string**| Filter by the name of the filter. | [optional] 
- **nameLike** | **string**| Filter by the name that the parameter is a substring of. | [optional] 
- **owner** | **string**| Filter by the user id of the owner of the filter. | [optional] 
- **itemCount** | **bool?**| If set to &#x60;true&#x60;, each filter result will contain an &#x60;itemCount&#x60; property with the number of items matched by the filter itself. | [optional] 
- **sortBy** | **string**| Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. | [optional] 
- **sortOrder** | **string**| Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. | [optional] 
- **firstResult** | **int?**| Pagination of results. Specifies the index of the first result to return. | [optional] 
- **maxResults** | **int?**| Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **filterId** | **string** | Filter by the id of the filter. | [optional]  |
+| **resourceType** | **string** | Filter by the resource type of the filter, e.g., &#x60;Task&#x60;. | [optional]  |
+| **name** | **string** | Filter by the name of the filter. | [optional]  |
+| **nameLike** | **string** | Filter by the name that the parameter is a substring of. | [optional]  |
+| **owner** | **string** | Filter by the user id of the owner of the filter. | [optional]  |
+| **itemCount** | **bool?** | If set to &#x60;true&#x60;, each filter result will contain an &#x60;itemCount&#x60; property with the number of items matched by the filter itself. | [optional]  |
+| **sortBy** | **string** | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. | [optional]  |
+| **sortOrder** | **string** | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. | [optional]  |
+| **firstResult** | **int?** | Pagination of results. Specifies the index of the first result to return. | [optional]  |
+| **maxResults** | **int?** | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional]  |
 
 ### Return type
 
@@ -718,7 +929,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -730,11 +941,11 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **400** |  Returned if some of the query parameters are invalid, for example if a &#x60;sortOrder&#x60; parameter is supplied, but no &#x60;sortBy&#x60; is specified. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **400** |  Returned if some of the query parameters are invalid, for example if a &#x60;sortOrder&#x60; parameter is supplied, but no &#x60;sortBy&#x60; is specified. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getsinglefilter"></a>
+<a id="getsinglefilter"></a>
 # **GetSingleFilter**
 > FilterDto GetSingleFilter (string id, bool? itemCount = null)
 
@@ -759,11 +970,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the filter to be retrieved.
+            var id = "id_example";  // string | The id of the filter to be retrieved.
             var itemCount = true;  // bool? | If set to `true`, each filter result will contain an `itemCount` property with the number of items matched by the filter itself. (optional) 
 
             try
@@ -774,8 +989,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.GetSingleFilter: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.GetSingleFilter: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -783,12 +998,32 @@ namespace Example
 }
 ```
 
+#### Using the GetSingleFilterWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Single Filter
+    ApiResponse<FilterDto> response = apiInstance.GetSingleFilterWithHttpInfo(id, itemCount);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.GetSingleFilterWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the filter to be retrieved. | 
- **itemCount** | **bool?**| If set to &#x60;true&#x60;, each filter result will contain an &#x60;itemCount&#x60; property with the number of items matched by the filter itself. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the filter to be retrieved. |  |
+| **itemCount** | **bool?** | If set to &#x60;true&#x60;, each filter result will contain an &#x60;itemCount&#x60; property with the number of items matched by the filter itself. | [optional]  |
 
 ### Return type
 
@@ -796,7 +1031,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -808,18 +1043,18 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **403** | The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
-| **404** | Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **403** | The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
+| **404** | Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postexecutefiltercount"></a>
+<a id="postexecutefiltercount"></a>
 # **PostExecuteFilterCount**
 > CountResultDto PostExecuteFilterCount (string id, Object body = null)
 
 Execute Filter Count (POST)
 
-Executes the saved query of the filter by id and returns the count. This method is slightly more powerful then the [Get Execute Filter Count](https://docs.camunda.org/manual/7.17/reference/rest/filter/get-execute-count/)  method because it allows to extend the saved query of the filter.
+Executes the saved query of the filter by id and returns the count. This method is slightly more powerful then the [Get Execute Filter Count](https://docs.camunda.org/manual/7.21/reference/rest/filter/get-execute-count/)  method because it allows to extend the saved query of the filter.
 
 ### Example
 ```csharp
@@ -838,11 +1073,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the filter to execute.
+            var id = "id_example";  // string | The id of the filter to execute.
             var body = {"assignee":"jonny1","taskDefinitionKey":"aTaskKey"};  // Object | A JSON object which corresponds to the type of the saved query of the filter, i.e., if the resource type of the filter is Task the body should form a valid task query corresponding to the Task resource. (optional) 
 
             try
@@ -853,8 +1092,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.PostExecuteFilterCount: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.PostExecuteFilterCount: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -862,12 +1101,32 @@ namespace Example
 }
 ```
 
+#### Using the PostExecuteFilterCountWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Execute Filter Count (POST)
+    ApiResponse<CountResultDto> response = apiInstance.PostExecuteFilterCountWithHttpInfo(id, body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.PostExecuteFilterCountWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the filter to execute. | 
- **body** | **Object**| A JSON object which corresponds to the type of the saved query of the filter, i.e., if the resource type of the filter is Task the body should form a valid task query corresponding to the Task resource. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the filter to execute. |  |
+| **body** | **Object** | A JSON object which corresponds to the type of the saved query of the filter, i.e., if the resource type of the filter is Task the body should form a valid task query corresponding to the Task resource. | [optional]  |
 
 ### Return type
 
@@ -875,7 +1134,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -887,19 +1146,19 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. |  -  |
-| **400** |  The extending query was invalid. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **400** |  The extending query was invalid. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postexecutefilterlist"></a>
+<a id="postexecutefilterlist"></a>
 # **PostExecuteFilterList**
 > List&lt;Object&gt; PostExecuteFilterList (string id, int? firstResult = null, int? maxResults = null, Object body = null)
 
 Execute Filter List (POST)
 
-Executes the saved query of the filter by id and returns the result list. This method is slightly more powerful then the  [Get Execute FilterList](https://docs.camunda.org/manual/7.17/reference/rest/filter/get-execute-list/) method because it allows to extend the saved query of the filter.
+Executes the saved query of the filter by id and returns the result list. This method is slightly more powerful then the  [Get Execute FilterList](https://docs.camunda.org/manual/7.21/reference/rest/filter/get-execute-list/) method because it allows to extend the saved query of the filter.
 
 ### Example
 ```csharp
@@ -918,11 +1177,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the filter to execute.
+            var id = "id_example";  // string | The id of the filter to execute.
             var firstResult = 56;  // int? | Pagination of results. Specifies the index of the first result to return. (optional) 
             var maxResults = 56;  // int? | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. (optional) 
             var body = {"assignee":"jonny1","taskDefinitionKey":"aTaskKey"};  // Object | A JSON object which corresponds to the type of the saved query of the filter, i.e., if the resource type of the filter is Task the body should form a valid task query corresponding to the Task resource. (optional) 
@@ -935,8 +1198,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.PostExecuteFilterList: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.PostExecuteFilterList: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -944,14 +1207,34 @@ namespace Example
 }
 ```
 
+#### Using the PostExecuteFilterListWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Execute Filter List (POST)
+    ApiResponse<List<Object>> response = apiInstance.PostExecuteFilterListWithHttpInfo(id, firstResult, maxResults, body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.PostExecuteFilterListWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the filter to execute. | 
- **firstResult** | **int?**| Pagination of results. Specifies the index of the first result to return. | [optional] 
- **maxResults** | **int?**| Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional] 
- **body** | **Object**| A JSON object which corresponds to the type of the saved query of the filter, i.e., if the resource type of the filter is Task the body should form a valid task query corresponding to the Task resource. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the filter to execute. |  |
+| **firstResult** | **int?** | Pagination of results. Specifies the index of the first result to return. | [optional]  |
+| **maxResults** | **int?** | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional]  |
+| **body** | **Object** | A JSON object which corresponds to the type of the saved query of the filter, i.e., if the resource type of the filter is Task the body should form a valid task query corresponding to the Task resource. | [optional]  |
 
 ### Return type
 
@@ -959,7 +1242,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -971,19 +1254,19 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | Request successful. A JSON array containing JSON objects corresponding to the matching entity interface in the engine. This depends on the saved query in the filter. Therefore it is not possible to specify a generic result format, i.e., if the resource type of the filter is Task the result will correspond to the Task interface in the engine. |  -  |
-| **400** |  The extending query was invalid. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **400** |  The extending query was invalid. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="postexecutefiltersingleresult"></a>
+<a id="postexecutefiltersingleresult"></a>
 # **PostExecuteFilterSingleResult**
 > Object PostExecuteFilterSingleResult (string id, Object body = null)
 
 Execute Filter Single Result (POST)
 
-Executes the saved query of the filter by id and returns the single result. This method is slightly more powerful then the [Get Execute Filter Single Result](https://docs.camunda.org/manual/7.17/reference/rest/filter/get-execute-single-result/) method because it allows to extend the saved query of the filter.
+Executes the saved query of the filter by id and returns the single result. This method is slightly more powerful then the [Get Execute Filter Single Result](https://docs.camunda.org/manual/7.21/reference/rest/filter/get-execute-single-result/) method because it allows to extend the saved query of the filter.
 
 ### Example
 ```csharp
@@ -1002,11 +1285,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the filter to execute.
+            var id = "id_example";  // string | The id of the filter to execute.
             var body = {"assignee":"jonny1","taskDefinitionKey":"aTaskKey"};  // Object | A JSON object which corresponds to the type of the saved query of the filter, i.e., if the resource type of the filter is Task the body should form a valid task query corresponding to the Task resource. (optional) 
 
             try
@@ -1017,8 +1304,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.PostExecuteFilterSingleResult: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.PostExecuteFilterSingleResult: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1026,12 +1313,32 @@ namespace Example
 }
 ```
 
+#### Using the PostExecuteFilterSingleResultWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Execute Filter Single Result (POST)
+    ApiResponse<Object> response = apiInstance.PostExecuteFilterSingleResultWithHttpInfo(id, body);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.PostExecuteFilterSingleResultWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the filter to execute. | 
- **body** | **Object**| A JSON object which corresponds to the type of the saved query of the filter, i.e., if the resource type of the filter is Task the body should form a valid task query corresponding to the Task resource. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the filter to execute. |  |
+| **body** | **Object** | A JSON object which corresponds to the type of the saved query of the filter, i.e., if the resource type of the filter is Task the body should form a valid task query corresponding to the Task resource. | [optional]  |
 
 ### Return type
 
@@ -1039,7 +1346,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1052,13 +1359,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | Request successful. A JSON object corresponding to the corresponding entity interface in the engine. This depends on the saved query in the filter. Therefore it is not possible specify a generic result format, i.e., if the resource type of the filter is Task the result will correspond to the Task interface in the engine. |  -  |
 | **204** | Request successful, but the result was empty. This method returns no content. |  -  |
-| **400** |  The executed filter returned more than one single result or the extending query was invalid. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **400** |  The executed filter returned more than one single result or the extending query was invalid. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **403** |  The authenticated user is unauthorized to read this filter. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **404** |  Filter with given id does not exist. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="updatefilter"></a>
+<a id="updatefilter"></a>
 # **UpdateFilter**
 > void UpdateFilter (string id, CreateFilterDto createFilterDto = null)
 
@@ -1083,11 +1390,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new FilterApi(httpClient, config, httpClientHandler);
-            var id = id_example;  // string | The id of the filter to be updated.
+            var id = "id_example";  // string | The id of the filter to be updated.
             var createFilterDto = new CreateFilterDto(); // CreateFilterDto |  (optional) 
 
             try
@@ -1097,8 +1408,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling FilterApi.UpdateFilter: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling FilterApi.UpdateFilter: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -1106,12 +1417,29 @@ namespace Example
 }
 ```
 
+#### Using the UpdateFilterWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Update Filter
+    apiInstance.UpdateFilterWithHttpInfo(id, createFilterDto);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling FilterApi.UpdateFilterWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**| The id of the filter to be updated. | 
- **createFilterDto** | [**CreateFilterDto**](CreateFilterDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **id** | **string** | The id of the filter to be updated. |  |
+| **createFilterDto** | [**CreateFilterDto**](CreateFilterDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -1119,7 +1447,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -1131,9 +1459,9 @@ No authorization required
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **204** | Request successful. This method returns no content. |  -  |
-| **400** |  Filter was invalid. See [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **403** |  The authenticated user is unauthorized to update this filter. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
-| **404** |  Filter cannot be found. See the [Introduction](https://docs.camunda.org/manual/7.17/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **400** |  Filter was invalid. See [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **403** |  The authenticated user is unauthorized to update this filter. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
+| **404** |  Filter cannot be found. See the [Introduction](https://docs.camunda.org/manual/7.21/reference/rest/overview/#error-handling) for the error response format.  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

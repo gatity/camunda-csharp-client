@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **DeleteReason** | **string** | A string with delete reason. | [optional] 
 **SkipCustomListeners** | **bool?** | Skip execution listener invocation for activities that are started or ended as part of this request. | [optional] 
 **SkipSubprocesses** | **bool?** | Skip deletion of the subprocesses related to deleted processes as part of this request. | [optional] 
+**SkipIoMappings** | **bool?** | Skip execution of [input/output variable mappings](https://docs.camunda.org/manual/7.21/user-guide/process-engine/variables/#input-output-variable-mapping) for activities that are started or ended as part of this request. | [optional] 
 **ProcessInstanceQuery** | [**ProcessInstanceQueryDto**](ProcessInstanceQueryDto.md) |  | [optional] 
 **HistoricProcessInstanceQuery** | [**HistoricProcessInstanceQueryDto**](HistoricProcessInstanceQueryDto.md) |  | [optional] 
 

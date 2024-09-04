@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **ParentActivityInstanceId** | **string** | The id of the parent activity instance, for example a sub process instance. | [optional] 
 **ActivityId** | **string** | The id of the activity. | [optional] 
 **ActivityName** | **string** | The name of the activity | [optional] 
+**Name** | **string** | The name of the activity. This property is deprecated. Please use &#39;activityName&#39;. | [optional] 
 **ActivityType** | **string** | The type of activity (corresponds to the XML element name in the BPMN 2.0, e.g., &#39;userTask&#39;) | [optional] 
 **ProcessInstanceId** | **string** | The id of the process instance this activity instance is part of. | [optional] 
 **ProcessDefinitionId** | **string** | The id of the process definition. | [optional] 

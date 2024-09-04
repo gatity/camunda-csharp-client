@@ -2,13 +2,12 @@
 
 All URIs are relative to *http://localhost:8080/engine-rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**GetSchemaLog**](SchemaLogApi.md#getschemalog) | **GET** /schema/log | Get List
-[**QuerySchemaLog**](SchemaLogApi.md#queryschemalog) | **POST** /schema/log | Get List (POST)
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**GetSchemaLog**](SchemaLogApi.md#getschemalog) | **GET** /schema/log | Get List |
+| [**QuerySchemaLog**](SchemaLogApi.md#queryschemalog) | **POST** /schema/log | Get List (POST) |
 
-
-<a name="getschemalog"></a>
+<a id="getschemalog"></a>
 # **GetSchemaLog**
 > List&lt;SchemaLogEntryDto&gt; GetSchemaLog (string version = null, string sortBy = null, string sortOrder = null, int? firstResult = null, int? maxResults = null)
 
@@ -33,13 +32,17 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new SchemaLogApi(httpClient, config, httpClientHandler);
-            var version = version_example;  // string | Only return schema log entries with a specific version. (optional) 
-            var sortBy = sortBy_example;  // string | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. (optional) 
-            var sortOrder = sortOrder_example;  // string | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. (optional) 
+            var version = "version_example";  // string | Only return schema log entries with a specific version. (optional) 
+            var sortBy = "timestamp";  // string | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. (optional) 
+            var sortOrder = "asc";  // string | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. (optional) 
             var firstResult = 56;  // int? | Pagination of results. Specifies the index of the first result to return. (optional) 
             var maxResults = 56;  // int? | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. (optional) 
 
@@ -51,8 +54,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SchemaLogApi.GetSchemaLog: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling SchemaLogApi.GetSchemaLog: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -60,15 +63,35 @@ namespace Example
 }
 ```
 
+#### Using the GetSchemaLogWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get List
+    ApiResponse<List<SchemaLogEntryDto>> response = apiInstance.GetSchemaLogWithHttpInfo(version, sortBy, sortOrder, firstResult, maxResults);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling SchemaLogApi.GetSchemaLogWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **version** | **string**| Only return schema log entries with a specific version. | [optional] 
- **sortBy** | **string**| Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. | [optional] 
- **sortOrder** | **string**| Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. | [optional] 
- **firstResult** | **int?**| Pagination of results. Specifies the index of the first result to return. | [optional] 
- **maxResults** | **int?**| Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **version** | **string** | Only return schema log entries with a specific version. | [optional]  |
+| **sortBy** | **string** | Sort the results lexicographically by a given criterion. Must be used in conjunction with the sortOrder parameter. | [optional]  |
+| **sortOrder** | **string** | Sort the results in a given order. Values may be asc for ascending order or desc for descending order. Must be used in conjunction with the sortBy parameter. | [optional]  |
+| **firstResult** | **int?** | Pagination of results. Specifies the index of the first result to return. | [optional]  |
+| **maxResults** | **int?** | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional]  |
 
 ### Return type
 
@@ -76,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -91,7 +114,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="queryschemalog"></a>
+<a id="queryschemalog"></a>
 # **QuerySchemaLog**
 > List&lt;SchemaLogEntryDto&gt; QuerySchemaLog (int? firstResult = null, int? maxResults = null, SchemaLogQueryDto schemaLogQueryDto = null)
 
@@ -116,6 +139,10 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
@@ -132,8 +159,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling SchemaLogApi.QuerySchemaLog: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling SchemaLogApi.QuerySchemaLog: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -141,13 +168,33 @@ namespace Example
 }
 ```
 
+#### Using the QuerySchemaLogWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get List (POST)
+    ApiResponse<List<SchemaLogEntryDto>> response = apiInstance.QuerySchemaLogWithHttpInfo(firstResult, maxResults, schemaLogQueryDto);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling SchemaLogApi.QuerySchemaLogWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **firstResult** | **int?**| Pagination of results. Specifies the index of the first result to return. | [optional] 
- **maxResults** | **int?**| Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional] 
- **schemaLogQueryDto** | [**SchemaLogQueryDto**](SchemaLogQueryDto.md)|  | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **firstResult** | **int?** | Pagination of results. Specifies the index of the first result to return. | [optional]  |
+| **maxResults** | **int?** | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional]  |
+| **schemaLogQueryDto** | [**SchemaLogQueryDto**](SchemaLogQueryDto.md) |  | [optional]  |
 
 ### Return type
 
@@ -155,7 +202,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 **TenantIdIn** | **List&lt;string&gt;** | Filter by a comma-separated list of tenant ids. Only select subscriptions that belong to one of the given tenant ids. | [optional] 
 **WithoutTenantId** | **bool?** | Only select subscriptions which have no tenant id. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional] 
 **IncludeEventSubscriptionsWithoutTenantId** | **bool?** | Select event subscriptions which have no tenant id. Can be used in combination with tenantIdIn parameter. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional] 
-**Sorting** | [**List&lt;EventSubscriptionQueryDtoSorting&gt;**](EventSubscriptionQueryDtoSorting.md) | Apply sorting of the result | [optional] 
+**Sorting** | [**List&lt;EventSubscriptionQueryDtoSortingInner&gt;**](EventSubscriptionQueryDtoSortingInner.md) | Apply sorting of the result | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

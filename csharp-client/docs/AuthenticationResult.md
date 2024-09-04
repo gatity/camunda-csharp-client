@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **AuthenticatedUser** | **string** | An id of authenticated user. | [optional] 
-**IsAuthenticated** | **bool?** | A flag indicating if user is authenticated. | [optional] 
+**Authenticated** | **bool?** | A flag indicating if user is authenticated. | [optional] 
 **Tenants** | **List&lt;string&gt;** | Will be null. | [optional] 
 **Groups** | **List&lt;string&gt;** | Will be null. | [optional] 
 

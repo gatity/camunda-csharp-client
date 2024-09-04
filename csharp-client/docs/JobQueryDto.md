@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **TenantIdIn** | **List&lt;string&gt;** | Only include jobs which belong to one of the passed  tenant ids. | [optional] 
 **WithoutTenantId** | **bool?** | Only include jobs which belong to no tenant. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional] 
 **IncludeJobsWithoutTenantId** | **bool?** | Include jobs which belong to no tenant. Can be used in combination with &#x60;tenantIdIn&#x60;. Value may only be &#x60;true&#x60;, as &#x60;false&#x60; is the default behavior. | [optional] 
-**Sorting** | [**List&lt;JobQueryDtoSorting&gt;**](JobQueryDtoSorting.md) | An array of criteria to sort the result by. Each element of the array is                        an object that specifies one ordering. The position in the array                        identifies the rank of an ordering, i.e., whether it is primary, secondary,                        etc. Does not have an effect for the &#x60;count&#x60; endpoint. | [optional] 
+**Sorting** | [**List&lt;JobQueryDtoSortingInner&gt;**](JobQueryDtoSortingInner.md) | An array of criteria to sort the result by. Each element of the array is                        an object that specifies one ordering. The position in the array                        identifies the rank of an ordering, i.e., whether it is primary, secondary,                        etc. Does not have an effect for the &#x60;count&#x60; endpoint. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

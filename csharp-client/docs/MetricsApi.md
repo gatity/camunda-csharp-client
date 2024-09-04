@@ -2,14 +2,13 @@
 
 All URIs are relative to *http://localhost:8080/engine-rest*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**DeleteTaskMetrics**](MetricsApi.md#deletetaskmetrics) | **DELETE** /metrics/task-worker | Delete Task Worker Metrics
-[**GetMetrics**](MetricsApi.md#getmetrics) | **GET** /metrics/{metrics-name}/sum | Get Sum
-[**Interval**](MetricsApi.md#interval) | **GET** /metrics | Get Metrics in Interval
+| Method | HTTP request | Description |
+|--------|--------------|-------------|
+| [**DeleteTaskMetrics**](MetricsApi.md#deletetaskmetrics) | **DELETE** /metrics/task-worker | Delete Task Worker Metrics |
+| [**GetMetrics**](MetricsApi.md#getmetrics) | **GET** /metrics/{metrics-name}/sum | Get Sum |
+| [**Interval**](MetricsApi.md#interval) | **GET** /metrics | Get Metrics in Interval |
 
-
-<a name="deletetaskmetrics"></a>
+<a id="deletetaskmetrics"></a>
 # **DeleteTaskMetrics**
 > void DeleteTaskMetrics (DateTime? date = null)
 
@@ -34,11 +33,15 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new MetricsApi(httpClient, config, httpClientHandler);
-            var date = 2013-10-20T19:20:30+01:00;  // DateTime? | The date prior to which all task worker metrics should be deleted. (optional) 
+            var date = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The date prior to which all task worker metrics should be deleted. (optional) 
 
             try
             {
@@ -47,8 +50,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MetricsApi.DeleteTaskMetrics: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MetricsApi.DeleteTaskMetrics: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -56,11 +59,28 @@ namespace Example
 }
 ```
 
+#### Using the DeleteTaskMetricsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Delete Task Worker Metrics
+    apiInstance.DeleteTaskMetricsWithHttpInfo(date);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MetricsApi.DeleteTaskMetricsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **date** | **DateTime?**| The date prior to which all task worker metrics should be deleted. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **date** | **DateTime?** | The date prior to which all task worker metrics should be deleted. | [optional]  |
 
 ### Return type
 
@@ -68,7 +88,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -84,7 +104,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="getmetrics"></a>
+<a id="getmetrics"></a>
 # **GetMetrics**
 > MetricsResultDto GetMetrics (string metricsName, DateTime? startDate = null, DateTime? endDate = null)
 
@@ -109,13 +129,17 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new MetricsApi(httpClient, config, httpClientHandler);
-            var metricsName = metricsName_example;  // string | The name of the metric.
-            var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The start date (inclusive). (optional) 
-            var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The end date (exclusive). (optional) 
+            var metricsName = "activity-instance-start";  // string | The name of the metric.
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date (inclusive). (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date (exclusive). (optional) 
 
             try
             {
@@ -125,8 +149,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MetricsApi.GetMetrics: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MetricsApi.GetMetrics: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -134,13 +158,33 @@ namespace Example
 }
 ```
 
+#### Using the GetMetricsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Sum
+    ApiResponse<MetricsResultDto> response = apiInstance.GetMetricsWithHttpInfo(metricsName, startDate, endDate);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MetricsApi.GetMetricsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **metricsName** | **string**| The name of the metric. | 
- **startDate** | **DateTime?**| The start date (inclusive). | [optional] 
- **endDate** | **DateTime?**| The end date (exclusive). | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **metricsName** | **string** | The name of the metric. |  |
+| **startDate** | **DateTime?** | The start date (inclusive). | [optional]  |
+| **endDate** | **DateTime?** | The end date (exclusive). | [optional]  |
 
 ### Return type
 
@@ -148,7 +192,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 
@@ -163,7 +207,7 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="interval"></a>
+<a id="interval"></a>
 # **Interval**
 > List&lt;MetricsIntervalResultDto&gt; Interval (string name = null, string reporter = null, DateTime? startDate = null, DateTime? endDate = null, int? firstResult = null, int? maxResults = null, string interval = null, string aggregateByReporter = null)
 
@@ -188,18 +232,22 @@ namespace Example
         {
             Configuration config = new Configuration();
             config.BasePath = "http://localhost:8080/engine-rest";
+            // Configure HTTP basic authorization: basicAuth
+            config.Username = "YOUR_USERNAME";
+            config.Password = "YOUR_PASSWORD";
+
             // create instances of HttpClient, HttpClientHandler to be reused later with different Api classes
             HttpClient httpClient = new HttpClient();
             HttpClientHandler httpClientHandler = new HttpClientHandler();
             var apiInstance = new MetricsApi(httpClient, config, httpClientHandler);
-            var name = name_example;  // string | The name of the metric. (optional) 
-            var reporter = reporter_example;  // string | The name of the reporter (host), on which the metrics was logged. This will have value provided by the [hostname configuration property](https://docs.camunda.org/manual/7.17/reference/deployment-descriptors/tags/process-engine/#hostname). (optional) 
-            var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The start date (inclusive). (optional) 
-            var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The end date (exclusive). (optional) 
+            var name = "activity-instance-start";  // string | The name of the metric. (optional) 
+            var reporter = "reporter_example";  // string | The name of the reporter (host), on which the metrics was logged. This will have value provided by the [hostname configuration property](https://docs.camunda.org/manual/7.21/reference/deployment-descriptors/tags/process-engine/#hostname). (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The start date (inclusive). (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? | The end date (exclusive). (optional) 
             var firstResult = 56;  // int? | Pagination of results. Specifies the index of the first result to return. (optional) 
             var maxResults = 56;  // int? | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. (optional) 
-            var interval = interval_example;  // string | The interval for which the metrics should be aggregated. Time unit is seconds. Default: The interval is set to 15 minutes (900 seconds). (optional)  (default to "900")
-            var aggregateByReporter = aggregateByReporter_example;  // string | Aggregate metrics by reporter. (optional) 
+            var interval = "\"900\"";  // string | The interval for which the metrics should be aggregated. Time unit is seconds. Default: The interval is set to 15 minutes (900 seconds). (optional)  (default to "900")
+            var aggregateByReporter = "aggregateByReporter_example";  // string | Aggregate metrics by reporter. (optional) 
 
             try
             {
@@ -209,8 +257,8 @@ namespace Example
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling MetricsApi.Interval: " + e.Message );
-                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print("Exception when calling MetricsApi.Interval: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
         }
@@ -218,18 +266,38 @@ namespace Example
 }
 ```
 
+#### Using the IntervalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Get Metrics in Interval
+    ApiResponse<List<MetricsIntervalResultDto>> response = apiInstance.IntervalWithHttpInfo(name, reporter, startDate, endDate, firstResult, maxResults, interval, aggregateByReporter);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling MetricsApi.IntervalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
 ### Parameters
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **name** | **string**| The name of the metric. | [optional] 
- **reporter** | **string**| The name of the reporter (host), on which the metrics was logged. This will have value provided by the [hostname configuration property](https://docs.camunda.org/manual/7.17/reference/deployment-descriptors/tags/process-engine/#hostname). | [optional] 
- **startDate** | **DateTime?**| The start date (inclusive). | [optional] 
- **endDate** | **DateTime?**| The end date (exclusive). | [optional] 
- **firstResult** | **int?**| Pagination of results. Specifies the index of the first result to return. | [optional] 
- **maxResults** | **int?**| Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional] 
- **interval** | **string**| The interval for which the metrics should be aggregated. Time unit is seconds. Default: The interval is set to 15 minutes (900 seconds). | [optional] [default to &quot;900&quot;]
- **aggregateByReporter** | **string**| Aggregate metrics by reporter. | [optional] 
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **name** | **string** | The name of the metric. | [optional]  |
+| **reporter** | **string** | The name of the reporter (host), on which the metrics was logged. This will have value provided by the [hostname configuration property](https://docs.camunda.org/manual/7.21/reference/deployment-descriptors/tags/process-engine/#hostname). | [optional]  |
+| **startDate** | **DateTime?** | The start date (inclusive). | [optional]  |
+| **endDate** | **DateTime?** | The end date (exclusive). | [optional]  |
+| **firstResult** | **int?** | Pagination of results. Specifies the index of the first result to return. | [optional]  |
+| **maxResults** | **int?** | Pagination of results. Specifies the maximum number of results to return. Will return less results if there are no more results left. | [optional]  |
+| **interval** | **string** | The interval for which the metrics should be aggregated. Time unit is seconds. Default: The interval is set to 15 minutes (900 seconds). | [optional] [default to &quot;900&quot;] |
+| **aggregateByReporter** | **string** | Aggregate metrics by reporter. | [optional]  |
 
 ### Return type
 
@@ -237,7 +305,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[basicAuth](../README.md#basicAuth)
 
 ### HTTP request headers
 

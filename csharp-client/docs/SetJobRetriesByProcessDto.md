@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**JobIds** | **List&lt;string&gt;** | A list of job ids to set retries for. | [optional] 
+**JobQuery** | [**JobQueryDto**](JobQueryDto.md) |  | [optional] 
+**DueDate** | **DateTime?** | The due date to set for the job. A due date indicates when this job is ready for execution. Jobs with due dates in the past will be scheduled for execution. | [optional] 
+**Retries** | **int?** | The number of retries to set for the resource.  Must be &gt;&#x3D; 0. If this is 0, an incident is created and the task, or job, cannot be fetched, or acquired anymore unless the retries are increased again. Can not be null. | [optional] 
 **ProcessInstances** | **List&lt;string&gt;** | A list of process instance ids to fetch jobs, for which retries will be set. | [optional] 
-**Retries** | **int?** | An integer representing the number of retries. Please note that the value cannot be negative or null. | [optional] 
 **ProcessInstanceQuery** | [**ProcessInstanceQueryDto**](ProcessInstanceQueryDto.md) |  | [optional] 
 **HistoricProcessInstanceQuery** | [**HistoricProcessInstanceQueryDto**](HistoricProcessInstanceQueryDto.md) |  | [optional] 
 
